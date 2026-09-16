@@ -8,16 +8,15 @@ Student Number: ST10526062
 Module: WEDE5020 – Web Development (Introduction)
 Year: 2026
 
-Project Overview
+# Project Overview
 
 This project is a website for Kwa Shumilensizwa, a restaurant that specialises in traditional Kasi-inspired meals.
 
 The aim is to give the restaurant its own online presence where customers can learn about the business, view the menu, make enquiries, find the restaurant and access online ordering.
 
-Website Goals
+# Website Goals
 
 The main goals of the website are to:
-
 Improve the restaurant's online presence.
 Make the menu easy to access.
 Help customers find contact and location information.
@@ -26,7 +25,7 @@ Promote the restaurant's food and brand.
 Create a website that works well on mobile and desktop devices.
 Target Audience
 
-The website is aimed mainly at:
+**The website is aimed mainly at:**
 
 Durban residents.
 Existing customers.
@@ -36,7 +35,7 @@ Visitors interested in local South African food.
 Customers who prefer finding restaurants and ordering online.
 Website Pages
 
-The website contains five main pages:
+**The website contains five main pages:**
 
 Page	File	Purpose
 Home	index.html	Introduces the restaurant and highlights meals
@@ -116,7 +115,10 @@ Web-Development-RC/
 │   └── script.js
 │
 ├── images/
-│
+│   └──Beef.jpg
+│   └──chicken.jpg
+│   └──talipa.jpg
+│ 
 └── README.md
 Timeline
 
