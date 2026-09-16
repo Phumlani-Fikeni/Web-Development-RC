@@ -102,7 +102,7 @@ GitHub – Version control and project submission.
 Project Structure
 Web-Development-RC/ <br />
 │ <br />
-├── index.html <br />
+├── Home.html <br />
 ├── about.html <br />
 ├── menu.html <br />
 ├── enquiry.html <br />
