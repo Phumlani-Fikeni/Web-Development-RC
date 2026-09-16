@@ -122,7 +122,11 @@ Web-Development-RC/ <br />
 └── README.md
 
 # Timeline
+<<<<<<< HEAD
 **The project is being developed in stages:**
+=======
+The project is being developed in stages:
+>>>>>>> bf549d9ea4903637b57879a0b9e420a3b4032151
 
 Research and planning.
 Website and design planning.
@@ -137,7 +141,7 @@ Part 1 focused mainly on researching the organisation and planning the website.
 
 **Completed work includes:**
 
-Organisation research.
+# Organisation research.
 Target audience.
 Website goals.
 Current online presence analysis.
@@ -153,7 +157,11 @@ Initial HTML structure.
 
 
 # Changelog
+<<<<<<< HEAD
 **Version 1.0 – 14 August 2026**
+=======
+Version 1.0 – 14 August 2026
+>>>>>>> bf549d9ea4903637b57879a0b9e420a3b4032151
 Created the GitHub repository.
 Completed the initial research and planning.
 Created the website sitemap.
