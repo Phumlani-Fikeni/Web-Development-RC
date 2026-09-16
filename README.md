@@ -44,19 +44,19 @@ Menu	menu.html	Displays meals, categories and prices
 Enquiry	enquiry.html	Allows customers to make enquiries and order requests
 Contact	contact.html	Provides contact, location and opening information
 Sitemap
-Home
-│
-├── About Us
-├── Menu
-│   ├── Beef
-│   ├── Chicken
-│   ├── Pork
-│   ├── Fish
-│   ├── Traditional Meals
-│   ├── Sides
-│   └── Drinks
-├── Enquiry
-└── Contact
+Home <br />
+│<br />
+├── About Us <br />
+├── Menu <br />
+│   ├── Beef <br />
+│   ├── Chicken <br />
+│   ├── Pork <br />
+│   ├── Fish <br />
+│   ├── Traditional Meals <br />
+│   ├── Sides <br />
+│   └── Drinks <br />
+├── Enquiry <br />
+└── Contact <br />
 Main Features
 
 The website will include:
@@ -100,25 +100,25 @@ JavaScript – Interactivity and form validation.
 Google Maps – Location information.
 GitHub – Version control and project submission.
 Project Structure
-Web-Development-RC/
-│
-├── index.html
-├── about.html
-├── menu.html
-├── enquiry.html
-├── contact.html
-│
-├── css/
-│   └── style.css
-│
-├── js/
-│   └── script.js
-│
-├── images/
-│   └──Beef.jpg
-│   └──chicken.jpg
-│   └──talipa.jpg
-│ 
+Web-Development-RC/ <br />
+│ <br />
+├── index.html <br />
+├── about.html <br />
+├── menu.html <br />
+├── enquiry.html <br />
+├── contact.html <br />
+│ <br />
+├── css/ <br />
+│   └── style.css <br />
+│ <br />
+├── js/ <br />
+│   └── script.js <br />
+│ <br />
+├── images/ <br />
+│   └──Beef.jpg <br />
+│   └──chicken.jpg <br />
+│   └──talipa.jpg <br />
+│  <br />
 └── README.md
 Timeline
 
