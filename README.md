@@ -120,8 +120,8 @@ Web-Development-RC/ <br />
 │   └──talipa.jpg <br />
 │  <br />
 └── README.md
-Timeline
 
+# Timeline
 The project is being developed in stages:
 
 Research and planning.
@@ -137,7 +137,7 @@ Part 1 focused mainly on researching the organisation and planning the website.
 
 Completed work includes:
 
-Organisation research.
+# Organisation research.
 Target audience.
 Website goals.
 Current online presence analysis.
@@ -152,7 +152,7 @@ Budget.
 Initial HTML structure.
 
 
-Changelog
+# Changelog
 Version 1.0 – 14 August 2026
 Created the GitHub repository.
 Completed the initial research and planning.
@@ -166,7 +166,16 @@ Planned Updates
 
 
 # Refereances
-Awanda. (2024). Easy Homemade Beef Stew. Healthy Fitness Meals.
-Colorary. (n.d.). Restaurant Color Palettes & Schemes.
-Contentsquare. (n.d.). Web Analytics Metrics and KPIs.
-Grocito. (2026). Minimal vs Bold Branding.
+Awada, R., 2024. Easy Homemade Beef Stew. [Online]  
+Available at: https://healthyfitnessmeals.com/homemade-beef-stew/ 
+[Accessed 13 August 2026]. 
+Colorary, n.d. 70 Restaurant Color Palettes & Schemes. [Online]  
+Available at: https://colorany.com/color-palettes/restaurant-color-palettes/ 
+[Accessed 13 August 2026]. 
+contentsquare, n.d. KPI. [Online]  
+Available at: https://contentsquare.com/guides/web-analytics/metrics/ 
+grocito, 2026. Minimal vs Bold Branding: Which Works Better for Your Industry? (A 
+Friendly, Practical Guide). [Online]  
+Available at: https://blog.grocito.com/minimal-vs-bold-branding-which-works-better
+for-your-industry-a-friendly-practical-guide/ 
+[Accessed 13 August 2026].
