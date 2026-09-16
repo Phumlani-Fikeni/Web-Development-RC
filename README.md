@@ -165,7 +165,7 @@ Added enquiry and contact forms.
 Planned Updates
 
 
-Refereances
+# Refereances
 Awanda. (2024). Easy Homemade Beef Stew. Healthy Fitness Meals.
 Colorary. (n.d.). Restaurant Color Palettes & Schemes.
 Contentsquare. (n.d.). Web Analytics Metrics and KPIs.
