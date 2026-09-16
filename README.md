@@ -157,11 +157,7 @@ Initial HTML structure.
 
 
 # Changelog
-<<<<<<< HEAD
 **Version 1.0 – 14 August 2026**
-=======
-Version 1.0 – 14 August 2026
->>>>>>> bf549d9ea4903637b57879a0b9e420a3b4032151
 Created the GitHub repository.
 Completed the initial research and planning.
 Created the website sitemap.

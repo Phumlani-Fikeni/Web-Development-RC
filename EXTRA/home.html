@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mochachos Menu</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, "Times New Roman", serif;
+            min-height: 100vh;
+            color: white;
+
+            background:
+                radial-gradient(
+                    circle at 15% 25%,
+                    rgba(150, 50, 10, 0.12) 0 60px,
+                    transparent 61px
+                ),
+                linear-gradient(
+                    to bottom,
+                    #f5a719 0%,
+                    #ffd62f 48%,
+                    #ffb72d 100%
+                );
+
+            overflow-x: hidden;
+        }
+
+     
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            height: 58px;
+            width: 100%;
+
+            display: flex;
+            align-items: center;
+
+            padding: 0 4%;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #831515,
+                    #a9251b,
+                    #7b1212
+                );
+
+            border-bottom: 4px solid #e0a52d;
+
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Logo */
+
+        .logo {
+            height: 58px;
+
+            padding: 0 15px;
+
+            display: flex;
+            align-items: center;
+
+            background: white;
+
+            color: #e63820;
+
+            font-size: 20px;
+            font-weight: bold;
+
+            text-shadow:
+                1px 1px #f0c327;
+
+            transform: skew(-4deg);
+
+            white-space: nowrap;
+        }
+
+        /* Navigation */
+
+        nav {
+            margin-left: auto;
+
+            display: flex;
+            align-items: center;
+
+            gap: 28px;
+        }
+
+        nav a {
+            color: #ffe5a8;
+
+            text-decoration: none;
+
+            font-size: 10px;
+
+            text-transform: uppercase;
+
+            transition: color 0.2s ease;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        /* Order button */
+
+        .header-order {
+            margin-left: 35px;
+
+            padding: 14px 23px;
+
+            background: white;
+
+            color: #d62d1c;
+
+            text-decoration: none;
+
+            font-size: 11px;
+            font-weight: bold;
+
+            transform: skew(-5deg);
+        }
+
+        /* =========================
+           MAIN
+        ========================= */
+
+        main {
+            position: relative;
+            z-index: 2;
+
+            padding: 22px 20px 45px;
+        }
+
+        /* =========================
+           TOP TOOLBAR
+        ========================= */
+
+        .toolbar {
+            max-width: 680px;
+
+            margin: 0 auto 12px;
+
+            display: flex;
+            align-items: center;
+
+            gap: 40px;
+        }
+
+        .order-now {
+            display: inline-block;
+
+            padding: 10px 18px;
+
+            background: #f04427;
+
+            color: white;
+
+            text-decoration: none;
+
+            font-size: 13px;
+            font-weight: bold;
+
+            transform: rotate(-5deg);
+
+            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .countries {
+            display: flex;
+            align-items: center;
+
+            gap: 12px;
+
+            color: #54270e;
+
+            font-size: 10px;
+        }
+
+        .country {
+            display: flex;
+            align-items: center;
+            gap: 3px;
+        }
+
+        .flag {
+            font-size: 15px;
+        }
+
+        /* =========================
+           MENU GRID
+        ========================= */
+
+        .menu-grid {
+            width: min(100%, 680px);
+
+            margin: 0 auto;
+
+            padding: 6px;
+
+            background: rgba(255,255,255,0.92);
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 10px;
+
+            box-shadow:
+                0 2px 8px rgba(0,0,0,0.15);
+        }
+
+        /* =========================
+           MENU CARD
+        ========================= */
+
+        .menu-card {
+            position: relative;
+
+            overflow: hidden;
+
+            aspect-ratio: 1.12 / 1;
+
+            cursor: pointer;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #6e2a16,
+                    #d58b29
+                );
+
+            border: 1px solid rgba(255,255,255,0.4);
+        }
+
+        /*
+            These gradients act as placeholder
+            food images.
+
+            Replace them with actual images
+            using background-image if desired.
+        */
+
+        .menu-card::before {
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background: var(--food);
+
+            background-size: cover;
+            background-position: center;
+
+            transition:
+                transform 0.3s ease;
+        }
+
+        .menu-card:hover::before {
+            transform: scale(1.08);
+        }
+
+        /* Dark gradient over image */
+
+        .menu-card::after {
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+            right: 0;
+            bottom: 0;
+
+            height: 65%;
+
+            background:
+                linear-gradient(
+                    transparent,
+                    rgba(0,0,0,0.85)
+                );
+        }
+
+        /* Card text */
+
+        .card-content {
+            position: absolute;
+
+            z-index: 2;
+
+            left: 0;
+            right: 0;
+            bottom: 12px;
+
+            text-align: center;
+
+            padding: 0 5px;
+
+            text-shadow:
+                1px 1px 3px black;
+        }
+
+        .card-content h3 {
+            font-size: 13px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 4px;
+        }
+
+        .card-content p {
+            font-size: 9px;
+
+            color: #fff;
+        }
+
+        /* =========================
+           DOWNLOAD BUTTON
+        ========================= */
+
+        .download-menu {
+            display: block;
+
+            width: 75px;
+
+            margin: 15px auto 0;
+
+            padding: 7px 5px;
+
+            background: white;
+
+            color: #555;
+
+            border: 1px solid #ddd;
+
+            text-align: center;
+
+            text-decoration: none;
+
+            font-size: 8px;
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 800px) {
+
+            nav {
+                display: none;
+            }
+
+            .header-order {
+                margin-left: auto;
+            }
+        }
+
+        @media (max-width: 650px) {
+
+            .toolbar {
+                justify-content: center;
+
+                flex-wrap: wrap;
+
+                gap: 20px;
+            }
+
+            .countries {
+                flex-wrap: wrap;
+
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 500px) {
+
+            header {
+                padding: 0 15px;
+            }
+
+            .logo {
+                font-size: 15px;
+            }
+
+            .header-order {
+                padding: 10px 13px;
+                font-size: 9px;
+            }
+
+            .menu-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+
+                gap: 7px;
+            }
+
+            .card-content h3 {
+                font-size: 11px;
+            }
+
+            .card-content p {
+                font-size: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header>
+
+        <div class="logo">
+            MOCHACHOS 🌮
+        </div>
+
+        <nav>
+            <a href="#">Menu</a>
+            <a href="#">Find a Store</a>
+            <a href="#">Promotions</a>
+            <a href="#">About Us</a>
+            <a href="#">Our Brands</a>
+            <a href="#">Contact Us</a>
+        </nav>
+
+        <a href="#" class="header-order">
+            ORDER NOW
+        </a>
+
+    </header>
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+
+    <main>
+
+        <!-- Top toolbar -->
+
+        <div class="toolbar">
+
+            <a href="#" class="order-now">
+                ORDER NOW
+            </a>
+
+            <div class="countries">
+
+                <span>
+                    Choose your country
+                </span>
+
+                <span class="country">
+                    <span class="flag">🇿🇦</span>
+                    ZA
+                </span>
+
+                <span class="country">
+                    <span class="flag">🇦🇺</span>
+                    AU
+                </span>
+
+                <span class="country">
+                    <span class="flag">🇳🇦</span>
+                    NA
+                </span>
+
+                <span class="country">
+                    <span class="flag">🇿🇲</span>
+                    ZM
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             MENU
+        ========================== -->
+
+        <section class="menu-grid">
+
+            <!-- Card 1 -->
+
+            <article
+                class="menu-card"
+                style="
+                    --food:
+                    linear-gradient(
+                        135deg,
+                        #713015,
+                        #d78a25
+                    );
+                "
+            >
+                <div class="card-content">
+                    <h3>Plato Loco</h3>
+                    <p>Full Meal</p>
+                </div>
+            </article>
+
+
+            <!-- Card 2 -->
+
+            <article
+                class="menu-card"
+                style="
+                    --food:
+                    linear-gradient(
+                        135deg,
+                        #47752f,
+                        #e2bd58
+                    );
+                "
+            >
+                <div class="card-content">
+                    <h3>Ensaladas</h3>
+                    <p>Salads</p>
+                </div>
+            </article>
+
+
+            <!-- Card 3 -->
+
+            <article
+                class="menu-card"
+                style="
+                    --food:
+                    linear-gradient(
+                        135deg,
+                        #dcae48,
+                        #783b1c
+                    );
+                "
+            >
+                <div class="card-content">
+                    <h3>Camino Meals</h3>
+                    <p>Fine Food</p>
+                </div>
+            </article>
+
+
+            <!-- Card 4 -->
+
+            <article
+                class="menu-card"
+                style="
+                    --food:
+                    linear-gradient(
+                        135deg,
+                        #b96d37,
+                        #ead39c
+                    );
+                "
+            >
+                <div class="card-content">
+                    <h3>Schwarmas</h3>
+                    <p>Spicy grilled meat</p>
+                </div>
+            </article>
+
+
+            <!-- Card 5 -->
+
+            <article
+                class="menu-card"
+                style="
+                    --food:
+                    linear-gradient(
+                        135deg,
+                        #541b12,
+                        #bd4b25
+                    );
+                "
+            >
+                <div class="card-content">
+                    <h3>Pollo Phelo</h3>
+                    <p>Village Chicken</p>
+                </div>
+            </article>
+
+
+            <!-- Card 6 -->
+
+            <article
+                class="menu-card"
+                style="
+                    --food:
+                    linear-gradient(
+                        135deg,
+                        #99602b,
+                        #dfc088
+                    );
+                "
+            >
+                <div class="card-content">
+                    <h3>Burgers El Loco</h3>
+                    <p>Mexican Burger</p>
+                </div>
+            </article>
+
+
+            <!-- Card 7 -->
+
+            <article
+                class="menu-card"
+                style="
+                    --food:
+                    linear-gradient(
+                        135deg,
+                        #dfa02c,
+                        #773218
+                    );
+                "
+            >
+                <div class="card-content">
+                    <h3>Combinations</h3>
+                    <p>Combo Meals</p>
+                </div>
+            </article>
+
+
+            <!-- Card 8 -->
+
+            <article
+                class="menu-card"
+                style="
+                    --food:
+                    linear-gradient(
+                        135deg,
+                        #5d702c,
+                        #d6b05a
+                    );
+                "
+            >
+                <div class="card-content">
+                    <h3>Mexican Meals</h3>
+                    <p>Mexican Variety</p>
+                </div>
+            </article>
+
+
+            <!-- Card 9 -->
+
+            <article
+                class="menu-card"
+                style="
+                    --food:
+                    linear-gradient(
+                        135deg,
+                        #a14b22,
+                        #dfaa3c
+                    );
+                "
+            >
+                <div class="card-content">
+                    <h3>Familia Fiesta</h3>
+                    <p>For the Family</p>
+                </div>
+            </article>
+
+
+            <!-- Card 10 -->
+
+            <article
+                class="menu-card"
+                style="
+                    --food:
+                    linear-gradient(
+                        135deg,
+                        #c28d39,
+                        #6b351a
+                    );
+                "
+            >
+                <div class="card-content">
+                    <h3>All Zee Sides</h3>
+                    <p>Delicious Sides</p>
+                </div>
+            </article>
+
+
+            <!-- Card 11 -->
+
+            <article
+                class="menu-card"
+                style="
+                    --food:
+                    linear-gradient(
+                        135deg,
+                        #702414,
+                        #bd7132
+                    );
+                "
+            >
+                <div class="card-content">
+                    <h3>Dessert</h3>
+                    <p>Sweet Treats</p>
+                </div>
+            </article>
+
+
+            <!-- Card 12 -->
+
+            <article
+                class="menu-card"
+                style="
+                    --food:
+                    linear-gradient(
+                        135deg,
+                        #e9c13b,
+                        #b72b1c
+                    );
+                "
+            >
+                <div class="card-content">
+                    <h3>Fiesta</h3>
+                    <p>Taste the Fiesta</p>
+                </div>
+            </article>
+
+        </section>
+
+
+        <!-- Download menu -->
+
+        <a href="#" class="download-menu">
+            Download Menu
+        </a>
+
+    </main>
+
+</body>
+</html>
