@@ -49,8 +49,7 @@ allow users to quickly access important information and website functions.
 - About Us	about.html	Explains the restaurant's background and values
 - Menu	menu.html	Displays meals, categories and prices
 - Enquiry	enquiry.html	Allows customers to make enquiries and order requests
-- Contact	contact.html	Provides contact, location and opening information
-<br>
+- Contact	contact.html	Provides contact, location and opening information<br>
 **Sitemap** <br>
 Home <br />
 │<br />
@@ -83,21 +82,21 @@ Main Features
 -Design
 
 # Colours
--Orange/Red: Main buttons and highlights.
--Yellow: Secondary accents.
--Red: Headings and food categories.
--Deep Purple: Navigation and footer.
--Lime Green: Background sections.
--Typography
--Poppins: Headings.
--Open Sans: Body text.
+- Orange/Red: Main buttons and highlights.
+- Yellow: Secondary accents.
+- Red: Headings and food categories.
+- Deep Purple: Navigation and footer.
+- Lime Green: Background sections.
+- Typography
+- Poppins: Headings.
+- Open Sans: Body text.
 
 #Technologies used
--HTML5 – Website structure.
--CSS3 – Styling and responsive layout.
--JavaScript – Interactivity and form validation.
--Google Maps – Location information.
--GitHub – Version control and project submission.<br>
+- HTML5 – Website structure.
+- CSS3 – Styling and responsive layout.
+- JavaScript – Interactivity and form validation.
+- Google Maps – Location information.
+- GitHub – Version control and project submission.<br>
 **Project Structure**<br>
 Web-Development-RC/ <br />
 │ <br />
@@ -160,20 +159,20 @@ Added enquiry and contact forms.<br>
 Planned Updates<br>
 **Part 2 - 15 August 2026 - 18 September 2026**<br>
 14 Sept <br>
--Provide detailed objectives for goals on readme.md
--Add functionality and fetures section on readme.md
--Add missing directories and files on site map 
-16 Sept <br>
--Remove unessesary css file
--Added style.css file
--Edit stylesheet
-17 Sept <br>
--Edit changelog 
--Add references to ReadMe.md
--Edit fonts
--Include reset script
--Include missing pictires
--
+- Provide detailed objectives for goals on readme.md
+- Add functionality and fetures section on readme.md
+- Add missing directories and files on site map 
+<br>16 Sept <br>
+- Remove unessesary css file
+- Added style.css file
+- Edit stylesheet
+<br>17 Sept <br>
+- Edit changelog 
+- Add references to ReadMe.md
+- Edit fonts
+- Include reset script
+- Include missing pictires
+
 18 Sept <br>
 
 # Refereances
