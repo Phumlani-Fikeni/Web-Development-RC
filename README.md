@@ -162,7 +162,6 @@ Added initial menu and restaurant content.<br>
 Added enquiry and contact forms.<br>
 Planned Updates<br>
 **Part 2 - 15 August 2026 - 18 September 2026**<br>
-15 Sept <br>
 16 Sept <br>
 17 Sept <br>
 18 Sept <br>
