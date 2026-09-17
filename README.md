@@ -118,46 +118,40 @@ Web-Development-RC/ <br />
 │   └──Beef.jpg <br />
 │   └──chicken.jpg <br />
 │   └──talipa.jpg <br />
+│   └──Hero.jpg <br />
 │  <br />
 └── README.md
 
 # Timeline
-<<<<<<< HEAD
 **The project is being developed in stages:**
-=======
-The project is being developed in stages:
->>>>>>> bf549d9ea4903637b57879a0b9e420a3b4032151
-
-Research and planning.
-Website and design planning.
-HTML structure.
-CSS styling and responsive design.
-JavaScript functionality.
-Testing and improvements.
-Final submission.
-Part 1 Progress
+** - Research and planning.
+** - Website and design planning.
+** - HTML structure.
+** - CSS styling and responsive design.
+** - JavaScript functionality.
+** - Testing and improvements.
+** - Final submission.
 
 Part 1 focused mainly on researching the organisation and planning the website.
 
-**Completed work includes:**
-
-# Organisation research.
-Target audience.
-Website goals.
-Current online presence analysis.
-Website features.
-Colour palette.
-Typography.
-Wireframes.
-Sitemap.
-Technical requirements.
-Project timeline.
-Budget.
-Initial HTML structure.
+# Completed work includes:
+Organisation research.<br>
+Target audience.<br>
+Website goals.<br>
+Current online presence analysis.<br>
+Website features.<br>
+Colour palette.<br>
+Typography.<br>
+Wireframes.<br>
+Sitemap.<br>
+Technical requirements.<br>
+Project timeline.<br>
+Budget.<br>
+Initial HTML structure.<br>
 
 
 # Changelog
-**Version 1.0 – 14 August 2026**
+**Part 1 30 July 2026 – 14 August 2026**
 Created the GitHub repository.
 Completed the initial research and planning.
 Created the website sitemap.
@@ -167,20 +161,24 @@ Added navigation between pages.
 Added initial menu and restaurant content.
 Added enquiry and contact forms.
 Planned Updates
-**Part 2 - 15 August 2026**
-
+**Part 2 - 15 August 2026 - 18 September 2026**
+15 Sept <br>
+16 Sept <br>
+17 Sept <br>
+18 Sept <br>
 
 # Refereances
 Awada, R., 2024. Easy Homemade Beef Stew. [Online]  
 Available at: https://healthyfitnessmeals.com/homemade-beef-stew/ 
-[Accessed 13 August 2026]. 
+[Accessed 13 August 2026]. <br>
 Colorary, n.d. 70 Restaurant Color Palettes & Schemes. [Online]  
 Available at: https://colorany.com/color-palettes/restaurant-color-palettes/ 
-[Accessed 13 August 2026]. 
+[Accessed 13 August 2026]. <br>
+Clark, R. (2009) HTML5 Reset Stylesheet. HTML5 Doctor, 27 July. Available at: https://html5doctor.com/html-5-reset-stylesheet/ [Accessed: 17 September 2026].<br>
 contentsquare, n.d. KPI. [Online]  
 Available at: https://contentsquare.com/guides/web-analytics/metrics/ 
-grocito, 2026. Minimal vs Bold Branding: Which Works Better for Your Industry? (A 
+[Accessed 13 August 2026] <br>
+Grocito, 2026. Minimal vs Bold Branding: Which Works Better for Your Industry? (A 
 Friendly, Practical Guide). [Online]  
-Available at: https://blog.grocito.com/minimal-vs-bold-branding-which-works-better
-for-your-industry-a-friendly-practical-guide/ 
-[Accessed 13 August 2026].
+Available at: https://blog.grocito.com/minimal-vs-bold-branding-which-works-better-for-your-industry-a-friendly-practical-guide/ 
+[Accessed 13 August 2026]. <br>
