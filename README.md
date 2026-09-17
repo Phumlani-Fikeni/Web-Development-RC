@@ -123,14 +123,14 @@ Web-Development-RC/ <br />
 └── README.md
 
 # Timeline
-**The project is being developed in stages:**
-** - Research and planning.
-** - Website and design planning.
-** - HTML structure.
-** - CSS styling and responsive design.
-** - JavaScript functionality.
-** - Testing and improvements.
-** - Final submission.
+**The project is being developed in stages:** <br>
+- Research and planning.<br>
+- Website and design planning.<br>
+- HTML structure.<br>
+- CSS styling and responsive design.<br>
+- JavaScript functionality.<br>
+- Testing and improvements.<br>
+- Final submission.<br>
 
 Part 1 focused mainly on researching the organisation and planning the website.
 
@@ -152,16 +152,16 @@ Initial HTML structure.<br>
 
 # Changelog
 **Part 1 30 July 2026 – 14 August 2026**
-Created the GitHub repository.
-Completed the initial research and planning.
-Created the website sitemap.
-Planned the five main website pages.
-Created the initial HTML structure.
-Added navigation between pages.
-Added initial menu and restaurant content.
-Added enquiry and contact forms.
-Planned Updates
-**Part 2 - 15 August 2026 - 18 September 2026**
+Created the GitHub repository.<br>
+Completed the initial research and planning.<br>
+Created the website sitemap.<br>
+Planned the five main website pages.<br>
+Created the initial HTML structure.<br>
+Added navigation between pages.<br>
+Added initial menu and restaurant content.<br>
+Added enquiry and contact forms.<br>
+Planned Updates<br>
+**Part 2 - 15 August 2026 - 18 September 2026**<br>
 15 Sept <br>
 16 Sept <br>
 17 Sept <br>
