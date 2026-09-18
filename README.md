@@ -176,6 +176,11 @@ Part 2 timeframe: 15 August 2026 – 18 September 2026
 - Use relative units and scalable values.
 - Make images responsive.
 - Improve the overall visual consistency of the website.
+# Responsive Testting
+Desktop view/ 
+![Website Screenshot](images/Screenshot%202026-09-18%20173326.png)
+Smaller sized
+![Website Screenshot](images/Screenshot%202026-09-18%20173859.png)
 
 # Changelog
 **Part 1 30 July 2026 – 14 August 2026**
