@@ -830,7 +830,47 @@ the three bars become visible.
     .menu-icon {
         display: block;
     }
+@media (max-width: 600px) {
 
+    section {
+        padding: 35px 5%;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 40px 5%;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(28px, 8vw, 40px);
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-buttons .button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .meal-container,
+    .review-container,
+    .contact-information,
+    .location-hours {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-categories {
+        grid-template-columns: 1fr;
+    }
+
+    .map-section iframe {
+        height: 300px;
+    }
+
+}
     .nav-links {
         display: none;
 
