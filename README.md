@@ -130,9 +130,43 @@ Web-Development-RC/ <br />
 - Testing and improvements.<br>
 - Final submission.<br>
 
-Part 1 focused mainly on researching the organisation and planning the website.
+## Part 1 Details
+Part 1 focused mainly on research, planning and the initial development of the website.
+Completed Part 1 activities included:
+Organisation research.
+Target audience research.
+Website goals and objectives.
+Current online presence analysis.
+Website feature planning.
+Colour palette selection.
+Typography planning.
+Wireframes.
+Sitemap.
+Technical requirements.
+Project timeline.
+Budget.
+Initial HTML structure.
+Creation of the GitHub repository.
+Navigation between website pages.
+Initial restaurant and menu content.
+Enquiry and contact forms.
+## Part 2 – CSS Styling and Responsive Design
+Part 2 timeframe: 15 August 2026 – 18 September 2026
+- Part 2 focused on transforming the initial HTML structure into a styled and responsive website using an external CSS stylesheet.
 
-# Completed work includes:
+**The main objectives of Part 2 were to:**
+- Create and link an external CSS stylesheet.
+- Establish consistent base styling.
+- Apply typography styles.
+- Create a clear page layout.
+- Apply colours and visual styling.
+- Add interactive hover and focus states.
+- Create responsive layouts.
+- Implement responsive navigation.
+- Use relative units and scalable values.
+- Make images responsive.
+- Improve the overall visual consistency of the website.
+
 # Changelog
 **Part 1 30 July 2026 – 14 August 2026**
 Organisation research.<br>
@@ -158,24 +192,42 @@ Added initial menu and restaurant content.<br>
 Added enquiry and contact forms.<br>
 Planned Updates<br>
 **Part 2 - 15 August 2026 - 18 September 2026**<br>
-14 Sept <br>
-- Provide detailed objectives for goals on readme.md
-- Add functionality and fetures section on readme.md
-- Add missing directories and files on site map 
-<br>16 Sept <br>
-- Remove unessesary css file
-- Added style.css file
-- Edit stylesheet
-<br>17 Sept <br>
-- Edit changelog 
-- Add references to ReadMe.md
-- Edit fonts
-- Include reset script
-- Include missing pictires
+4 September 2026<br>
+- Added detailed objectives for the website goals to README.md.
+- Added the Features and Functionality section to README.md.
+- Updated the sitemap/project structure to include missing directories and files.
 
-18 Sept <br>
+<br> 16 September 2026<br>
+- Removed an unnecessary CSS file.
+- Created and implemented the main external style.css stylesheet.
+- Linked the external stylesheet to the website pages.
+- Edited and improved the stylesheet.
+- Added consistent styling across the website.
+- Added responsive layouts using CSS Grid and Flexbox.
+- Added responsive navigation.
+<br> 17 September 2026 <br>
+- Updated the changelog.
+- Added references to README.md.
+- Added the CSS reset stylesheet.
+- Included the source/reference for the reset code.
+- Updated typography and font styling.
+- Added responsive/scalable font sizing.
+- Added missing images.
+- Improved image styling and responsiveness.
+- Added hover and focus styling.
+- Added background-image styling.
+<br>18 September 2026 <br>
+- Completed Part 2 CSS styling and responsive design updates.
+- Continued refining the external stylesheet.
+- Applied responsive styling to navigation, content sections, cards, forms and images.
+- Reviewed the website layout for desktop and smaller screen sizes.
+- Updated README.md to document the Part 2 development work.
+- Updated references used during the CSS and website development process.
 
-# Refereances
+
+
+
+# References
 Awada, R., 2024. Easy Homemade Beef Stew. [Online]  
 Available at: https://healthyfitnessmeals.com/homemade-beef-stew/ 
 [Accessed 13 August 2026]. <br>
