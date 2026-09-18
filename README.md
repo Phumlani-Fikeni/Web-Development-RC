@@ -253,3 +253,27 @@ Grocito, 2026. Minimal vs Bold Branding: Which Works Better for Your Industry? (
 Friendly, Practical Guide). [Online]  
 Available at: https://blog.grocito.com/minimal-vs-bold-branding-which-works-better-for-your-industry-a-friendly-practical-guide/ 
 [Accessed 13 August 2026]. <br>
+In Your Pocket (n.d.) A South African Chisa Nyama [Photograph]. Available at:
+https://www.inyourpocket.com/southafrica/johannesburg/articles/a-south-african-chisa-nyama
+(Accessed: 18 September 2026).
+
+IOL (2026) Homemade South African vegetable atchar [Photograph]. Available at:
+https://iol.co.za/lifestyle/food-drink/2026-07-20-homemade-south-african-vegetable-atchar-recipe-that-is-easy-to-make/
+(Accessed: 18 September 2026).
+
+Penwills (2025) Grilled tilapia [Photograph]. Wikimedia Commons. Available at:
+https://commons.wikimedia.org/wiki/File:Grilled_tilapia.jpg
+(Accessed: 18 September 2026).
+
+Pradhan, K. (2015) Pork Chops [Photograph]. Wikimedia Commons. Available at:
+https://commons.wikimedia.org/wiki/File:Pork_Chops.jpg
+(Accessed: 18 September 2026).
+
+Rankaga, B.N. (2026) Beef tripe (Mogodu wa kgomo) [Photograph]. Wikimedia Commons. Available at:
+https://commons.wikimedia.org/wiki/File:Beef_tripe(Mogodu_wa_kgomo).jpg
+(Accessed: 18 September 2026).
+
+Wikimedia Commons (n.d.) Category: Takeaway food shops in South Africa [Photographs].
+Available at:
+https://commons.wikimedia.org/wiki/Category:Takeaway_food_shops_in_South_Africa
+(Accessed: 18 September 2026).
