@@ -117,6 +117,16 @@ Web-Development-RC/ <br />
 │   └──chicken.jpg <br />
 │   └──talipa.jpg <br />
 │   └──Hero.jpg <br />
+│   └──Chicken1.jpg <br />
+│   └──Foof.jpg <br />
+│   └──Hero.jpg <br />
+│   └──Grilled fish.jpg <br />
+│   └──Pork chops.jpg <br />
+│   └──Sides.jpg <br />
+│   └──Takeaway.jpg <br />
+│   └──Tripe.jpg <br />
+│   └──Tshisanyama.jpg <br />
+│   └──Chicken1.jpg <br />
 │  <br />
 └── README.md
 
