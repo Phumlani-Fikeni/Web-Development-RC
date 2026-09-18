@@ -186,6 +186,7 @@ Clark, R. (2009) HTML5 Reset Stylesheet. HTML5 Doctor, 27 July. Available at: ht
 contentsquare, n.d. KPI. [Online]  
 Available at: https://contentsquare.com/guides/web-analytics/metrics/ 
 [Accessed 13 August 2026] <br>
+Google (2026) The Maps Embed API overview. Google for Developers. Available at: https://developers.google.com/maps/documentation/embed/get-started (Accessed: 18 September 2026).<br>
 Grocito, 2026. Minimal vs Bold Branding: Which Works Better for Your Industry? (A 
 Friendly, Practical Guide). [Online]  
 Available at: https://blog.grocito.com/minimal-vs-bold-branding-which-works-better-for-your-industry-a-friendly-practical-guide/ 
