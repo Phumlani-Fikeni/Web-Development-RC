@@ -1,75 +1,894 @@
-body{
-font-family: 'Segoe UI',  system-ui, sans-serif;
-margin: 0;
-padding:40px;
-color: #2e2e2e;
-background-color: #F8F8F8;
-max-width: 1200px;
-margin: 0 auto;
+/*
+===============================================
+ADD the sources reset Code
+===============================================
+*/
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
 }
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;  
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+/*=============================
+End of reset code 
+=====================================
+*/
+
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    transition: 0.2s;
+}
+
+
+/* ============================= */
+/* HEADER AND NAVIGATION */
+/* ============================= */
+
 header {
-    background-color: #171717;
+     background-color: #171717;
     color: white;
-    width: 100%;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+
+    padding: 15px 5%;
 }
 
 nav {
-    max-width: 1200px;
-    margin: 0 auto;
-    min-height: 75px;
-    padding: 0 25px;
-
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .logo a {
-    color: #f4a623;
+    color: white;
     text-decoration: none;
-    font-size: 1.4rem;
+    font-size: clamp(18px, 3vw, 25px);
     font-weight: bold;
-    letter-spacing: 1px;
 }
+
+/* Navigation links */
 
 .nav-links {
     list-style: none;
-
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    gap: 25px;
+    gap: 10px;
+}
+
+.nav-links li {
+    list-style: none;
 }
 
 .nav-links a {
     color: white;
     text-decoration: none;
-    font-size: 0.95rem;
-    font-weight: 600;
-
-    transition: color 0.3s ease;
+    padding: 8px 10px;
+    display: block;
 }
 
 .nav-links a:hover {
-    color: #f4a623;
-}
-
-/* Order Now button */
-
-.nav-links .order-button {
-    background-color: #f4a623;
-    color: #171717;
-    padding: 10px 18px;
+    background-color: #8b451f;
     border-radius: 5px;
-    transition: all 0.3s ease;
 }
 
-.nav-links .order-button:hover {
-    background-color: #d88908;
+/* Order button */
+
+.order-button {
+    background-color: #d98b36;
+    border-radius: 5px;
+}
+
+/* ============================= */
+/* THREE BAR MENU */
+/* ============================= */
+
+/* Hide the checkbox */
+
+#menu-toggle {
+    display: none;
+}
+
+/* Three bars */
+
+.menu-icon {
+    display: none;
+    width: 35px;
+    cursor: pointer;
+}
+
+.menu-icon span {
+    display: block;
+    height: 4px;
+    background-color: white;
+    margin: 6px 0;
+    border-radius: 2px;
+}
+
+
+/* ============================= */
+/* HERO SECTION */
+/* ============================= */
+
+.hero {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(280px, 1fr)
+    );
+
+    gap: 40px;
+    align-items: center;
+
+    padding: 60px 5%;
+
+    background-color: #f2d2a9;
+}
+
+.hero-content h1 {
+    font-size: clamp(32px, 5vw, 55px);
+    line-height: 1.2;
+    color: #6b2d1a;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: clamp(16px, 2vw, 20px);
+    margin-bottom: 25px;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin: auto;
+    border-radius: 10px;
+}
+
+
+/* ============================= */
+/* BUTTONS */
+/* ============================= */
+
+.button {
+    display: inline-block;
+
+    background-color: #6b2d1a;
     color: white;
 
+    text-decoration: none;
+
+    padding: 10px 20px;
+
+    border-radius: 5px;
+
+    margin-top: 10px;
 }
 
+.button:hover {
+    background-color: #8b451f;
+}
+
+.secondary-button {
+    background-color: #d98b36;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+
+/* ============================= */
+/* GENERAL SECTIONS */
+/* ============================= */
+
+section {
+    padding: 50px 5%;
+}
+
+section h2 {
+    color: #6b2d1a;
+    font-size: clamp(25px, 4vw, 35px);
+    margin-bottom: 15px;
+}
+
+
+/* ============================= */
+/* PAGE HEADER */
+/* ============================= */
+
+.page-header {
+    text-align: center;
+    background-color: #f2d2a9;
+    padding: 50px 5%;
+}
+
+.page-header h1 {
+    color: #6b2d1a;
+    font-size: clamp(32px, 5vw, 50px);
+    margin-bottom: 10px;
+}
+
+
+/* ============================= */
+/* FEATURED MEALS */
+/* ============================= */
+
+.featured-meals {
+    text-align: center;
+}
+
+.meal-container {
+    display: grid;
+
+    /*
+    This automatically changes the number
+    of cards depending on screen size.
+
+    Large screen = 3 cards
+    Medium screen = 2 cards
+    Small screen = 1 card
+    */
+
+    grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+
+    gap: 25px;
+
+    margin-top: 30px;
+}
+
+.meal-card {
+    background-color: white;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 3px 10px
+        rgba(0, 0, 0, 0.15);
+}
+
+.meal-card img {
+    width: 100%;
+    height: 200px;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+
+    margin-bottom: 15px;
+}
+
+.meal-card h3 {
+    color: #6b2d1a;
+    font-size: 22px;
+
+    margin-bottom: 10px;
+}
+
+.price {
+    color: #d2691e;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    margin-top: 10px;
+}
+
+
+/* ============================= */
+/* ABOUT PREVIEW */
+/* ============================= */
+
+.about-preview {
+    background-color: #f2d2a9;
+}
+
+.about-preview div {
+    max-width: 850px;
+    margin: auto;
+}
+
+
+/* ============================= */
+/* ABOUT PAGE */
+/* ============================= */
+
+.about-section {
+    display: grid;
+
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(280px, 1fr)
+    );
+
+    gap: 40px;
+
+    align-items: center;
+}
+
+.about-image img {
+    width: 100%;
+
+    max-width: 600px;
+
+    margin: auto;
+
+    border-radius: 10px;
+}
+
+.about-content p {
+    margin-bottom: 15px;
+}
+
+
+/* ============================= */
+/* MISSION */
+/* ============================= */
+
+.mission {
+    text-align: center;
+    background-color: #f2d2a9;
+}
+
+.mission p {
+    max-width: 800px;
+    margin: auto;
+}
+
+
+/* ============================= */
+/* FOOD PHILOSOPHY */
+/* ============================= */
+
+.food-philosophy {
+    text-align: center;
+}
+
+.philosophy-container {
+    display: grid;
+
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(220px, 1fr)
+    );
+
+    gap: 25px;
+
+    margin-top: 30px;
+}
+
+.philosophy-container article {
+    background-color: white;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 3px 10px
+        rgba(0, 0, 0, 0.12);
+}
+
+.philosophy-container h3 {
+    color: #6b2d1a;
+
+    margin-bottom: 10px;
+}
+
+
+/* ============================= */
+/* CALL TO ACTION */
+/* ============================= */
+
+.call-to-action {
+    text-align: center;
+    background-color: #f2d2a9;
+}
+
+.call-to-action .button {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+
+/* ============================= */
+/* MENU PAGE */
+/* ============================= */
+
+.menu-categories {
+    display: grid;
+
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(150px, 1fr)
+    );
+
+    gap: 15px;
+
+    margin: 30px 0;
+}
+
+.menu-categories a {
+    background-color: #6b2d1a;
+
+    color: white;
+
+    text-decoration: none;
+
+    text-align: center;
+
+    padding: 15px;
+
+    border-radius: 5px;
+}
+
+.menu-categories a:hover {
+    background-color: #8b451f;
+}
+
+
+/* ============================= */
+/* REVIEWS */
+/* ============================= */
+
+.reviews {
+    background-color: #f2d2a9;
+    text-align: center;
+}
+
+.review-container {
+    display: grid;
+
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(250px, 1fr)
+    );
+
+    gap: 25px;
+
+    margin-top: 30px;
+}
+
+.review {
+    background-color: white;
+
+    padding: 25px;
+
+    border-radius: 10px;
+}
+
+.review h3 {
+    color: #d98b36;
+
+    font-size: 24px;
+
+    margin-bottom: 10px;
+}
+
+
+/* ============================= */
+/* LOCATION AND HOURS */
+/* ============================= */
+
+.location-hours {
+    display: grid;
+
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(250px, 1fr)
+    );
+
+    gap: 40px;
+}
+
+
+/* ============================= */
+/* CONTACT PAGE */
+/* ============================= */
+
+.contact-information {
+    display: grid;
+
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(250px, 1fr)
+    );
+
+    gap: 25px;
+}
+
+.contact-card {
+    background-color: white;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 3px 10px
+        rgba(0, 0, 0, 0.12);
+}
+
+.contact-card h2 {
+    margin-bottom: 20px;
+}
+
+.contact-card p {
+    margin-bottom: 15px;
+}
+
+.contact-card a:not(.button) {
+    color: #6b2d1a;
+}
+
+
+/* ============================= */
+/* OPENING HOURS */
+/* ============================= */
+
+.opening-hours {
+    background-color: #f2d2a9;
+
+    text-align: center;
+}
+
+.opening-hours table {
+    width: 100%;
+
+    max-width: 800px;
+
+    margin: 25px auto;
+
+    border-collapse: collapse;
+
+    background-color: white;
+}
+
+.opening-hours th {
+    background-color: #6b2d1a;
+
+    color: white;
+
+    padding: 12px;
+}
+
+.opening-hours td {
+    padding: 12px;
+
+    border: 1px solid #ddd;
+}
+
+.opening-hours tr:nth-child(even) {
+    background-color: #f7f7f7;
+}
+
+
+/* ============================= */
+/* FORMS
+/* ============================= */
+
+.form-section {
+    max-width: 900px;
+
+    margin: auto;
+}
+
+.form-section h2 {
+    text-align: center;
+}
+
+form {
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 3px 10px
+        rgba(0, 0, 0, 0.12);
+
+    margin-top: 25px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+
+    font-weight: bold;
+
+    color: #6b2d1a;
+
+    margin-bottom: 7px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 5px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 16px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+
+    border-color: #6b2d1a;
+}
+
+
+/* ============================= */
+/* MAP */
+/* ============================= */
+
+.map-section {
+    text-align: center;
+
+    background-color: #f2d2a9;
+}
+
+.map-section iframe {
+    width: 100%;
+
+    max-width: 1000px;
+
+    height: 400px;
+
+    border: 0;
+
+    border-radius: 10px;
+
+    margin-top: 20px;
+}
+
+
+/* =============================
+FOOTER 
+============================= */
+
+footer {
+    background-color: #6b2d1a;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 30px 5%;
+}
+
+.footer-links,
+.social-links {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-top: 15px;
+}
+
+.footer-links a,
+.social-links a {
+    color: white;
+
+    text-decoration: none;
+}
+
+.footer-links a:hover,
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+
+/* ============================= 
+RESPONSIVE NAVIGATION 
+============================= */
+
+/*
+The container gets smaller as the screen gets smaller.
+The navigation links can wrap naturally.
+*/
+
+nav {
+    container-type: inline-size;
+}
+
+
+/*
+When the navigation area becomes narrow,
+the three bars become visible.
+*/
+
+@container (max-width: 750px) {
+
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+
+        width: 100%;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        background-color: #6b2d1a;
+
+        padding: 10px 0;
+    }
+
+    #menu-toggle:checked ~ .nav-links {
+        display: flex;
+    }
+
+    .nav-links a {
+        text-align: center;
+
+        width: 100%;
+
+        padding: 12px;
+    }
+
+    .nav-links a:hover {
+        background-color: #8b451f;
+    }
+}
+
+
+p {
+    overflow-wrap: break-word;
+}
+
+iframe {
+    max-width: 100%;
+}
+/* =====================================
+   FADED BODY BACKGROUND
+===================================== */
+
+body {
+  position: relative;
+  isolation: isolate;
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url('../images/Hero.jpg'); /* fix path - your images are in /images/ */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.5; 
+  z-index: -1;
+}
