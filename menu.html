@@ -58,16 +58,20 @@
         <!-- Menu Categories -->
         <section class="menu-section">
 
-            <div class="menu-categories">
-
-                <a href="#beef">Beef</a>
-                <a href="#chicken">Chicken</a>
-                <a href="#pork">Pork</a>
-                <a href="#fish">Fish</a>
-                <a href="#traditional">Traditional Meals</a>
-                <a href="#sides">Sides</a>
-                <a href="#drinks">Drinks</a>
-
+          <div class="menu-tools">
+                <div class="tool">
+                    <label for="menuSearch">Search the menu</label>
+                    <input type="search" id="menuSearch" placeholder="e.g. chicken, fish, mogodu">
+                </div>
+                <div class="tool">
+                    <label for="menuSort">Sort by</label>
+                    <select id="menuSort">
+                        <option value="default">Menu order</option>
+                        <option value="price-asc">Price: low to high</option>
+                        <option value="price-desc">Price: high to low</option>
+                        <option value="name">Name: A to Z</option>
+                    </select>
+                </div>
             </div>
 
             <!-- Beef -->

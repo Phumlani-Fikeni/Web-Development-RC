@@ -501,38 +501,60 @@ section h2 {
 /* ============================= */
 /* MENU PAGE */
 /* ============================= */
-
-.menu-categories {
-    display: grid;
-
-    grid-template-columns: repeat(
-        auto-fit,
-        minmax(150px, 1fr)
-    );
-
-    gap: 15px;
-
-    margin: 30px 0;
+/* ---- Menu tools: search, sort, filter buttons ---- */
+.menu-tools {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: end;
+    margin-bottom: 1.5rem;
 }
+.menu-tools .tool { display: flex; flex-direction: column; gap: 0.35rem; text-align: left; }
+.menu-tools label { font-weight: 600; color: #581845; }
+.menu-tools input,
+.menu-tools select {
+    padding: 0.65rem 0.85rem;
+    border: 0.125rem solid #581845;
+    border-radius: 0.5rem;
+    font: inherit;
+    min-width: 14rem;
+}
+.menu-tools input:focus,
+.menu-tools select:focus { outline: 0.2rem solid #FFC300; outline-offset: 0.1rem; }
 
-.menu-categories a {
-    background-color: #6b2d1a;
+.filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+.filter-button {
+    padding: 0.55rem 1.1rem;
+    border: 0.125rem solid #C70039;
+    border-radius: 2rem;
+    background: #fff;
+    color: #C70039;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+.filter-button:hover { transform: translateY(-0.125rem); }
+.filter-button[aria-pressed="true"],
+.filter-button:focus-visible { background: #C70039; color: #fff; outline: none; }
 
-    color: white;
-
-    text-decoration: none;
-
+.menu-count { text-align: center; color: #581845; margin-bottom: 1.5rem; }
+.data-error,
+.no-results {
     text-align: center;
-
-    padding: 15px;
-
-    border-radius: 5px;
+    padding: 1.25rem;
+    background: #fff3f3;
+    border: 0.125rem solid #C70039;
+    border-radius: 0.5rem;
+    color: #C70039;
 }
-
-.menu-categories a:hover {
-    background-color: #8b451f;
-}
-
 
 /* ============================= */
 /* REVIEWS */
