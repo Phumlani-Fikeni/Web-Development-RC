@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,29 +18,26 @@
     <!-- Header -->
     <header>
         <nav>
-
             <div class="logo">
                 <a href="Home.html">KWA SHUMILENSIZWA</a>
             </div>
 
-              <input type="checkbox" id="menu-toggle">
+            <input type="checkbox" id="menu-toggle">
 
-<label for="menu-toggle" class="menu-icon">
-    <span></span>
-    <span></span>
-    <span></span>
-</label>
+            <label for="menu-toggle" class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
 
-<ul class="nav-links">
-    <li><a href="Home.html">Home</a></li>
-    <li><a href="about.html">About Us</a></li>
-    <li><a href="menu.html">Menu</a></li>
-    <li><a href="enquiry.html">Enquiry</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="enquiry.html" class="order-button">Order Now</a></li>
-</ul>
-
-
+            <ul class="nav-links">
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="enquiry.html">Enquiry</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="enquiry.html" class="order-button">Order Now</a></li>
+            </ul>
         </nav>
     </header>
 
@@ -47,35 +45,34 @@
 
         <!-- Page Header -->
         <section class="page-header">
-
-            <h1>Enquiry & Orders</h1>
+            <h1>Enquiry &amp; Orders</h1>
 
             <p>
                 Have a question or want to enquire about an order?
                 Complete the form below.
             </p>
-
         </section>
 
         <!-- Enquiry Form -->
         <section class="form-section">
 
             <div class="form-introduction">
-
                 <h2>Send Us an Enquiry</h2>
 
                 <p>
                     Please provide your details and tell us what you would
                     like to enquire about. We will respond as soon as possible.
                 </p>
-
             </div>
 
-            <form action="https://script.google.com/macros/s/AKfycbwhLIKQ6oenVYIFMUSXAV6BGABxuacYJQ8DMS5eEen9z1k8gb7kCe_bkf7_RoCGwml0/exec" method="post">
+            <form
+                id="enquiry-form"
+                action="https://script.google.com/macros/s/AKfycbwhLIKQ6oenVYIFMUSXAV6BGABxuacYJQ8DMS5eEen9z1k8gb7kCe_bkf7_RoCGwml0/exec"
+                method="post"
+            >
 
                 <!-- Customer Name -->
                 <div class="form-group">
-
                     <label for="name">Full Name *</label>
 
                     <input
@@ -83,14 +80,13 @@
                         id="name"
                         name="name"
                         placeholder="Enter your full name"
+                        autocomplete="name"
                         required
                     >
-
                 </div>
 
                 <!-- Email -->
                 <div class="form-group">
-
                     <label for="email">Email Address *</label>
 
                     <input
@@ -98,14 +94,13 @@
                         id="email"
                         name="email"
                         placeholder="Enter your email address"
+                        autocomplete="email"
                         required
                     >
-
                 </div>
 
                 <!-- Phone -->
                 <div class="form-group">
-
                     <label for="phone">Phone Number *</label>
 
                     <input
@@ -113,84 +108,42 @@
                         id="phone"
                         name="phone"
                         placeholder="Enter your phone number"
+                        autocomplete="tel"
                         required
                     >
-
                 </div>
 
                 <!-- Enquiry Type -->
                 <div class="form-group">
-
                     <label for="enquiry-type">Enquiry Type *</label>
 
                     <select id="enquiry-type" name="enquiry-type" required>
-
                         <option value="">-- Select an option --</option>
-
-                        <option value="food-order">
-                            Food Order
-                        </option>
-
-                        <option value="menu-enquiry">
-                            Menu Enquiry
-                        </option>
-
-                        <option value="availability">
-                            Meal Availability
-                        </option>
-
-                        <option value="catering">
-                            Catering Enquiry
-                        </option>
-
-                        <option value="general">
-                            General Enquiry
-                        </option>
-
+                        <option value="food-order">Food Order</option>
+                        <option value="menu-enquiry">Menu Enquiry</option>
+                        <option value="availability">Meal Availability</option>
+                        <option value="catering">Catering Enquiry</option>
+                        <option value="general">General Enquiry</option>
                     </select>
-
                 </div>
 
                 <!-- Meal -->
                 <div class="form-group">
-
                     <label for="meal">Meal / Product</label>
 
                     <select id="meal" name="meal">
-
                         <option value="">-- Select a meal --</option>
-
-                        <option value="beef">
-                            Medium Beef - R130
-                        </option>
-
-                        <option value="chicken">
-                            Chicken Meal - R130
-                        </option>
-
-                        <option value="pork">
-                            Pork Chop - R100
-                        </option>
-
-                        <option value="tilapia">
-                            Grilled Tilapia - R100
-                        </option>
-
-                        <option value="mogodu">
-                            Mogodu - R120
-                        </option>
-
-                        <option value="other">
-                            Other / Multiple Items
-                        </option>
-
+                        <option value="beef">Medium Beef - R130</option>
+                        <option value="chicken">Chicken Meal - R130</option>
+                        <option value="pork">Pork Chop - R100</option>
+                        <option value="tilapia">Grilled Tilapia - R100</option>
+                        <option value="mogodu">Mogodu - R120</option>
+                        <option value="other">Other / Multiple Items</option>
                     </select>
-
                 </div>
 
                 <!-- Quantity -->
                 <div class="form-group">
-
                     <label for="quantity">Quantity</label>
 
                     <input
@@ -198,14 +151,13 @@
                         id="quantity"
                         name="quantity"
                         min="1"
+                        step="1"
                         placeholder="Enter quantity"
                     >
-
                 </div>
 
                 <!-- Preferred Date -->
                 <div class="form-group">
-
                     <label for="date">Preferred Date</label>
 
                     <input
@@ -213,12 +165,10 @@
                         id="date"
                         name="date"
                     >
-
                 </div>
 
                 <!-- Preferred Time -->
                 <div class="form-group">
-
                     <label for="time">Preferred Time</label>
 
                     <input
@@ -226,13 +176,13 @@
                         id="time"
                         name="time"
                     >
-
                 </div>
 
                 <!-- Message -->
                 <div class="form-group">
-
-                    <label for="message">Message / Additional Information *</label>
+                    <label for="message">
+                        Message / Additional Information *
+                    </label>
 
                     <textarea
                         id="message"
@@ -241,27 +191,27 @@
                         placeholder="Tell us how we can help you..."
                         required
                     ></textarea>
-
                 </div>
 
                 <!-- Submit -->
-                <button type="submit" class="button">
+                <button type="submit" id="submit-button" class="button">
                     Submit Enquiry
                 </button>
 
+                <!-- Submission Status -->
+                <p
+                    id="form-status"
+                    role="status"
+                    aria-live="polite"
+                    style="margin-top: 15px;"
+                ></p>
+
             </form>
-<iframe
-    name="enquiry-response"
-    title="Enquiry submission status"
-    width="100%"
-    height="90"
-    style="border: 0; margin-top: 15px;"
-></iframe>
+
         </section>
 
         <!-- Ordering Information -->
         <section class="ordering-information">
-
             <h2>Need to Order Online?</h2>
 
             <p>
@@ -269,18 +219,21 @@
                 to place an order.
             </p>
 
-            <!-- Replace # with the actual Uber Eats URL -->
-            <a href="#" class="button" target="_blank">
+            <!-- Replace # with the actual Uber Eats ordering URL -->
+            <a
+                href="#"
+                class="button"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
                 Order Through Uber Eats
             </a>
-
         </section>
 
     </main>
 
     <!-- Footer -->
     <footer>
-
         <p>&copy; 2026 Kwa Shumilensizwa. All Rights Reserved.</p>
 
         <div class="footer-links">
@@ -295,8 +248,68 @@
             <a href="#">Instagram</a>
             <a href="#">Facebook</a>
         </div>
-
     </footer>
+
+    <!-- Google Apps Script Submission -->
+    <script>
+        const enquiryForm = document.getElementById("enquiry-form");
+        const formStatus = document.getElementById("form-status");
+        const submitButton = document.getElementById("submit-button");
+
+        const scriptURL =
+            "https://script.google.com/macros/s/AKfycbwhLIKQ6oenVYIFMUSXAV6BGABxuacYJQ8DMS5eEen9z1k8gb7kCe_bkf7_RoCGwml0/exec";
+
+        enquiryForm.addEventListener("submit", async function (event) {
+            event.preventDefault();
+
+            if (!enquiryForm.reportValidity()) {
+                return;
+            }
+
+            submitButton.disabled = true;
+            submitButton.textContent = "Submitting...";
+            formStatus.textContent = "Sending your enquiry...";
+            formStatus.style.color = "";
+
+            try {
+                const formData = new FormData(enquiryForm);
+                const encodedData = new URLSearchParams();
+
+                for (const [key, value] of formData.entries()) {
+                    encodedData.append(key, value);
+                }
+
+                await fetch(scriptURL, {
+                    method: "POST",
+                    mode: "no-cors",
+                    body: encodedData
+                });
+
+                /*
+                 * With no-cors, the browser cannot read Google's response.
+                 * This message means the request was attempted, not that
+                 * the spreadsheet save has been independently confirmed.
+                 */
+                formStatus.textContent =
+                    "Your enquiry has been sent. Please contact us directly if you need to confirm receipt.";
+
+                formStatus.style.color = "green";
+                enquiryForm.reset();
+
+            } catch (error) {
+                console.error("Enquiry submission error:", error);
+
+                formStatus.textContent =
+                    "We could not send your enquiry. Please try again or contact us directly.";
+
+                formStatus.style.color = "red";
+
+            } finally {
+                submitButton.disabled = false;
+                submitButton.textContent = "Submit Enquiry";
+            }
+        });
+    </script>
 
 </body>
 </html>
