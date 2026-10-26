@@ -238,7 +238,7 @@ Planned Updates<br>
 - Reviewed the website layout for desktop and smaller screen sizes.
 - Updated README.md to document the Part 2 development work.
 - Updated references used during the CSS and website development process.
-
+**Part 3 - 18 September 2026 - 5 November 2026**<br>
 
 
 
