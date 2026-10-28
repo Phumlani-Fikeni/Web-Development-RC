@@ -954,3 +954,97 @@ body::before {
   opacity: 0.5; 
   z-index: -1;
 }
+/* Part 3: Menu controls */
+.menu-controls {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+
+.menu-controls label {
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+}
+
+.menu-controls input,
+.menu-controls select {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    padding: 0.75rem;
+    border: 1px solid #777;
+    border-radius: 5px;
+    font: inherit;
+}
+
+.menu-controls input:focus,
+.menu-controls select:focus {
+    outline: 3px solid #e9a23b;
+    outline-offset: 2px;
+}
+
+/* Hidden menu categories must stay hidden. */
+.menu-category[hidden] {
+    display: none !important;
+}
+
+/* Form validation */
+.error-message {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+input[aria-invalid="true"],
+textarea[aria-invalid="true"],
+select[aria-invalid="true"] {
+    border: 2px solid #c0392b !important;
+}
+
+/* Image lightbox */
+.image-lightbox {
+    width: min(90vw, 900px);
+    max-width: 90vw;
+    max-height: 90vh;
+    margin: auto;
+    padding: 1rem;
+    border: 0;
+    border-radius: 10px;
+}
+
+.image-lightbox::backdrop {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.image-lightbox img {
+    display: block;
+    max-width: 100%;
+    max-height: 75vh;
+    width: auto;
+    height: auto;
+    margin: 0 auto 1rem;
+    object-fit: contain;
+}
+
+/* Optional scroll-reveal animation */
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(15px);
+    transition: opacity 0.45s ease, transform 0.45s ease;
+}
+
+.reveal-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal-on-scroll,
+    .reveal-on-scroll.is-visible {
+        transition: none;
+        transform: none;
+        opacity: 1;
+    }
+}

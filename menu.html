@@ -54,7 +54,29 @@
             </p>
 
         </section>
+        
+<!-- Menu Search and Sorting -->
+<section class="menu-controls" aria-labelledby="menu-controls-heading">
+    <h2 id="menu-controls-heading">Find Your Meal</h2>
 
+    <label for="menuSearch">Search meals or categories</label>
+    <input
+        type="search"
+        id="menuSearch"
+        placeholder="e.g. chicken, beef or mogodu"
+        autocomplete="off"
+    >
+
+    <label for="menuSort">Sort menu categories</label>
+    <select id="menuSort">
+        <option value="default">Default order</option>
+        <option value="name">Alphabetical order</option>
+        <option value="price-asc">Price: low to high</option>
+        <option value="price-desc">Price: high to low</option>
+    </select>
+
+    <p>Search results update as you type.</p>
+</section>
         <!-- Menu Categories -->
         <section class="menu-section">
 
