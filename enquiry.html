@@ -250,66 +250,8 @@
         </div>
     </footer>
 
-    <!-- Google Apps Script Submission -->
-    <script>
-        const enquiryForm = document.getElementById("enquiry-form");
-        const formStatus = document.getElementById("form-status");
-        const submitButton = document.getElementById("submit-button");
 
-        const scriptURL =
-            "https://script.google.com/macros/s/AKfycbyxf5-DWTuJUMXYWZSphB-tR7ukeKoV_aQY1040D5DmN7cORGXRqdNoHGmEuJ53K9XtjA/exec";
-
-        enquiryForm.addEventListener("submit", async function (event) {
-            event.preventDefault();
-
-            if (!enquiryForm.reportValidity()) {
-                return;
-            }
-
-            submitButton.disabled = true;
-            submitButton.textContent = "Submitting...";
-            formStatus.textContent = "Sending your enquiry...";
-            formStatus.style.color = "";
-
-            try {
-                const formData = new FormData(enquiryForm);
-                const encodedData = new URLSearchParams();
-
-                for (const [key, value] of formData.entries()) {
-                    encodedData.append(key, value);
-                }
-
-                await fetch(scriptURL, {
-                    method: "POST",
-                    mode: "no-cors",
-                    body: encodedData
-                });
-
-                /*
-                 * With no-cors, the browser cannot read Google's response.
-                 * This message means the request was attempted, not that
-                 * the spreadsheet save has been independently confirmed.
-                 */
-                formStatus.textContent =
-                    "Your enquiry has been sent. Please contact us directly if you need to confirm receipt.";
-
-                formStatus.style.color = "green";
-                enquiryForm.reset();
-
-            } catch (error) {
-                console.error("Enquiry submission error:", error);
-
-                formStatus.textContent =
-                    "We could not send your enquiry. Please try again or contact us directly.";
-
-                formStatus.style.color = "red";
-
-            } finally {
-                submitButton.disabled = false;
-                submitButton.textContent = "Submit Enquiry";
-            }
-        });
-    </script>
+   
 <script src="js/script.js"></script>
 <script src="js/main.js"></script>
 </body>
