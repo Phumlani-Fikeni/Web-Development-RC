@@ -57,9 +57,7 @@
 
         <!-- Menu Categories -->
         <section class="menu-section">
-<button id="Display-menu">
-    menu
-</button>
+
           <div class="menu-tools">
                 <div class="tool">
                     <label for="menuSearch">Search the menu</label>
@@ -75,7 +73,15 @@
                     </select>
                 </div>
             </div>
-
+<button
+    id="Display-menu"
+    class="menu-accordion"
+    type="button"
+    aria-expanded="false"
+    aria-controls="menu-accordion-content">
+    <span>DISPLAY MENU</span>
+    <span class="accordion-icon" aria-hidden="true">+</span>
+</button>
             <!-- Beef -->
             <div class="menu-category" id="beef">
 
@@ -301,6 +307,7 @@
         </div>
 
     </footer>
-
+<script src="js/script.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
