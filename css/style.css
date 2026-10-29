@@ -36,6 +36,41 @@ body {
     line-height:1;
 }
 
+/* Google Maps JavaScript API */
+.map-section {
+    padding: 40px 5%;
+    text-align: center;
+}
+
+#map {
+    width: 100%;
+    height: 450px;
+    margin: 25px auto;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #eeeeee;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.map-actions {
+    margin-top: 20px;
+}
+
+#map-message {
+    color: #b00020;
+    margin-top: 12px;
+}
+
+@media (max-width: 600px) {
+    #map {
+        height: 350px;
+    }
+
+    .map-section {
+        padding: 30px 15px;
+    }
+}
+
 article,aside,details,figcaption,figure,
 footer,header,hgroup,menu,nav,section {
     display:block;
