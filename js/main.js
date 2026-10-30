@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", function () {
     initAccordion();      // Display / hide toggles (Gallery on the Home page)
     initGallery();        // Builds the gallery from js/gallery-data.js
     initLightbox();       // Click-to-enlarge images
-    initMap();            // Leaflet map (Contact page)
     initSearch();         // Menu search, filter and sort
     initEnquiryForm();    // Enquiry form: validation, AJAX and instant response
     initContactForm();    // Contact form: validation and compiled email

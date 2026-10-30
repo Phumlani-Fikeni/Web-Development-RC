@@ -17,16 +17,311 @@ const OPEN_TIME = "08:45";
 const CLOSE_TIME = "20:00";
 const CLOSED_DAY = 0;
 
-// Map position. Check these coordinates in Google Maps
-// (right-click the restaurant > click the coordinates to copy them).
+
+/* =========================================
+   GOOGLE MAPS - KWA SHUMILENSIZWA
+   ========================================= */
+
 const RESTAURANT = {
     name: "Kwa Shumilensizwa",
     address: "130 Clark Road, Durban, KwaZulu-Natal",
     lat: -29.8562,
-    lng: 30.9938,
-    directions:
-        "https://www.google.com/maps/search/?api=1&query=130+Clark+Road+Durban"
+    lng: 30.9938
 };
+
+let restaurantMap;
+let restaurantMarker;
+let visitorMarker;
+let nearbyMarkers = [];
+let mapInfoWindow;
+
+/* Initialise Google Maps */
+async function initMap() {
+
+    const { Map, InfoWindow } =
+        await google.maps.importLibrary("maps");
+
+    const { AdvancedMarkerElement } =
+        await google.maps.importLibrary("marker");
+
+    restaurantMap = new Map(
+        document.getElementById("map"),
+        {
+            center: {
+                lat: RESTAURANT.lat,
+                lng: RESTAURANT.lng
+            },
+
+            zoom: 16,
+
+            mapId: "DEMO_MAP_ID",
+
+            mapTypeControl: true,
+            streetViewControl: true,
+            fullscreenControl: true,
+            zoomControl: true
+        }
+    );
+
+    mapInfoWindow = new InfoWindow();
+
+    /* Restaurant marker */
+    restaurantMarker = new AdvancedMarkerElement({
+        map: restaurantMap,
+        position: {
+            lat: RESTAURANT.lat,
+            lng: RESTAURANT.lng
+        },
+        title: RESTAURANT.name
+    });
+
+    /* Restaurant information popup */
+    restaurantMarker.addListener("click", function () {
+
+        mapInfoWindow.setContent(`
+            <div style="padding:10px">
+                <h3>${RESTAURANT.name}</h3>
+                <p>${RESTAURANT.address}</p>
+                <a href="https://www.google.com/maps/dir/?api=1&destination=${RESTAURANT.lat},${RESTAURANT.lng}"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                   Get Directions
+                </a>
+            </div>
+        `);
+
+        mapInfoWindow.open({
+            map: restaurantMap,
+            anchor: restaurantMarker
+        });
+
+    });
+
+    /* Location button */
+    document.getElementById("locate-me")
+        .addEventListener("click", locateVisitor);
+
+    /* Nearby places button */
+    document.getElementById("nearby-places")
+        .addEventListener("click", findNearbyPlaces);
+
+    document.getElementById("map-status").textContent =
+        "Map loaded successfully. Select a feature to explore.";
+
+}
+
+/* =========================================
+   FIND VISITOR LOCATION
+   ========================================= */
+
+function locateVisitor() {
+
+    const status = document.getElementById("map-status");
+
+    if (!navigator.geolocation) {
+        status.textContent =
+            "Your browser does not support location services.";
+        return;
+    }
+
+    status.textContent = "Finding your location...";
+
+    navigator.geolocation.getCurrentPosition(
+
+        function (position) {
+
+            const visitorPosition = {
+                lat: position.coords.latitude,
+                lng: position.coords.longitude
+            };
+
+            restaurantMap.setCenter(visitorPosition);
+            restaurantMap.setZoom(16);
+
+            if (visitorMarker) {
+                visitorMarker.position = visitorPosition;
+            } else {
+                visitorMarker = new google.maps.marker.AdvancedMarkerElement({
+                    map: restaurantMap,
+                    position: visitorPosition,
+                    title: "Your current location"
+                });
+            }
+
+            /* Update directions using visitor coordinates */
+            document.getElementById("directions-link").href =
+                "https://www.google.com/maps/dir/?api=1" +
+                "&origin=" + visitorPosition.lat + "," +
+                visitorPosition.lng +
+                "&destination=" + RESTAURANT.lat + "," +
+                RESTAURANT.lng;
+
+            status.textContent =
+                "Your location has been found successfully.";
+
+        },
+
+        function (error) {
+
+            const messages = {
+                1: "Location permission was denied.",
+                2: "Your location is currently unavailable.",
+                3: "Location request timed out."
+            };
+
+            status.textContent =
+                messages[error.code] ||
+                "Unable to determine your location.";
+
+        },
+
+        {
+            enableHighAccuracy: true,
+            timeout: 10000,
+            maximumAge: 0
+        }
+
+    );
+
+}
+
+/* =========================================
+   FIND NEARBY PLACES
+   ========================================= */
+
+async function findNearbyPlaces() {
+
+    const status = document.getElementById("map-status");
+
+    status.textContent = "Searching for nearby places...";
+
+    try {
+
+        const { Place } =
+            await google.maps.importLibrary("places");
+
+        const { AdvancedMarkerElement } =
+            await google.maps.importLibrary("marker");
+
+        /* Remove previous nearby markers */
+        nearbyMarkers.forEach(function (marker) {
+            marker.map = null;
+        });
+
+        nearbyMarkers = [];
+
+        const request = {
+
+            fields: [
+                "displayName",
+                "location",
+                "formattedAddress",
+                "googleMapsURI"
+            ],
+
+            locationRestriction: {
+                center: restaurantMap.getCenter(),
+                radius: 1500
+            },
+
+            includedPrimaryTypes: [
+                "restaurant",
+                "cafe",
+                "tourist_attraction"
+            ],
+
+            maxResultCount: 10
+
+        };
+
+        const { places } = await Place.searchNearby(request);
+
+        if (!places || places.length === 0) {
+
+            status.textContent =
+                "No nearby places were found.";
+
+            return;
+        }
+
+        const bounds = new google.maps.LatLngBounds();
+
+        /* Include restaurant location */
+        bounds.extend({
+            lat: RESTAURANT.lat,
+            lng: RESTAURANT.lng
+        });
+
+        places.forEach(function (place) {
+
+            if (!place.location) return;
+
+            const marker = new AdvancedMarkerElement({
+
+                map: restaurantMap,
+
+                position: place.location,
+
+                title: place.displayName
+
+            });
+
+            marker.addListener("click", function () {
+
+                const content = document.createElement("div");
+
+                const heading = document.createElement("h3");
+                heading.textContent = place.displayName;
+
+                const address = document.createElement("p");
+                address.textContent =
+                    place.formattedAddress || "Address unavailable";
+
+                content.append(heading, address);
+
+                if (place.googleMapsURI) {
+
+                    const link = document.createElement("a");
+                    link.href = place.googleMapsURI;
+                    link.target = "_blank";
+                    link.rel = "noopener noreferrer";
+                    link.textContent = "View on Google Maps";
+
+                    content.appendChild(link);
+
+                }
+
+                mapInfoWindow.setContent(content);
+
+                mapInfoWindow.open({
+                    map: restaurantMap,
+                    anchor: marker
+                });
+
+            });
+
+            nearbyMarkers.push(marker);
+
+            bounds.extend(place.location);
+
+        });
+
+        restaurantMap.fitBounds(bounds);
+
+        status.textContent =
+            places.length + " nearby places found. Click a marker to explore.";
+
+    } catch (error) {
+
+        console.error("Nearby search error:", error);
+
+        status.textContent =
+            "Nearby search failed. Check your API key and Places API settings.";
+
+    }
+
+}
+
 
 /* ---------- Shared helpers ---------- */
 
@@ -293,66 +588,7 @@ function initLightbox() {
     });
 }
 
-/* ---------- 4. Interactive map (Leaflet + OpenStreetMap) ---------- */
 
-function initMap() {
-    const mapElement = document.getElementById("map");
-
-    if (!mapElement) return;
-
-    if (typeof L === "undefined") {
-        const fallback = createEl("p", "The interactive map could not be loaded. ");
-        const link = createEl("a", "Open the location in Google Maps.");
-        link.href = RESTAURANT.directions;
-        link.target = "_blank";
-        link.rel = "noopener noreferrer";
-        fallback.appendChild(link);
-        mapElement.appendChild(fallback);
-        return;
-    }
-
-    const position = [RESTAURANT.lat, RESTAURANT.lng];
-
-    const map = L.map(mapElement, { scrollWheelZoom: false }).setView(
-        position,
-        16
-    );
-
-    L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-        maxZoom: 19,
-        attribution:
-            '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(map);
-
-    const popup = document.createElement("div");
-    popup.append(
-        createEl("strong", RESTAURANT.name),
-        document.createElement("br"),
-        document.createTextNode(RESTAURANT.address),
-        document.createElement("br")
-    );
-
-    const directions = createEl("a", "Get directions");
-    directions.href = RESTAURANT.directions;
-    directions.target = "_blank";
-    directions.rel = "noopener noreferrer";
-    popup.appendChild(directions);
-
-    L.marker(position, { title: RESTAURANT.name })
-        .addTo(map)
-        .bindPopup(popup)
-        .openPopup();
-
-    // Scroll-wheel zoom only after the visitor clicks the map,
-    // so the page can still be scrolled normally.
-    map.on("focus", function () {
-        map.scrollWheelZoom.enable();
-    });
-
-    map.on("blur", function () {
-        map.scrollWheelZoom.disable();
-    });
-}
 
 /* ---------- 5. Search, filter and sort menu ---------- */
 

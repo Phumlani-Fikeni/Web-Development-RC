@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://famous-pothos-ebc837.netlify.app/
+Sitemap: https://famous-pothos-ebc837.netlify.app/sitemap.xml

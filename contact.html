@@ -152,7 +152,7 @@
                     <tr>
                         <td>Friday</td>
                         <td>08:45-20:00</td>
-                    </trss>
+                    </tr>
 
                     <tr>
                         <td>Saturday</td>
@@ -248,27 +248,48 @@
 
         </section>
 
-        <!-- Map -->
-        <section class="map-section">
+      <!-- Interactive Google Maps Section -->
+<section class="map-section">
 
-            <h2>Find Us on the Map</h2>
+    <h2>Find Kwa Shumilensizwa</h2>
 
-            <p>
-                Use the map below to find our location.
-            </p>
+    <p>
+        Visit us at 130 Clark Road, Durban.
+        Explore our location and nearby places.
+    </p>
 
-            <!-- Google Maps Embed -->
-           <iframe
-                id="map"
-                src="https://www.google.com/maps?q=130+Clark+Road,+Durban&output=embed"
-                width="100%"
-                height="400"
-                style="border:0;"
-                allowfullscreen
-                loading="lazy"
-                title="Kwa Shumilensizwa location map">
-            </iframe>
-        </section>
+    <div class="map-controls">
+
+        <button type="button" id="locate-me" class="button">
+            Find My Location
+        </button>
+
+        <button type="button" id="nearby-places" class="button">
+            Explore Nearby Places
+        </button>
+
+        <a
+            id="directions-link"
+            class="button"
+            href="https://www.google.com/maps/dir/?api=1&destination=130+Clark+Road,+Durban"
+            target="_blank"
+            rel="noopener noreferrer">
+            Get Directions
+        </a>
+
+    </div>
+
+    <p id="map-status" role="status" aria-live="polite">
+        Loading map...
+    </p>
+
+    <div
+        id="map"
+        role="application"
+        aria-label="Interactive map showing Kwa Shumilensizwa">
+    </div>
+
+</section>
 
     </main>
 
@@ -293,5 +314,8 @@
     </footer>
 <script src="js/script.js"></script>
 <script src="js/main.js"></script>
+<script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSO-1eZSL_hvVKV34pJyjjXKkqWCzZJ_E&loading=async&callback=initMap">
+</script>
 </body>
 </html>
