@@ -4,11 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta name="description" content="Contact Kwa Shumilensizwa with food enquiries and order requests.">
+    <title>Enquiry & Orders | Kwa Shumilensizwa Durban</title>
+    <meta name="description" content="Ask about a meal, get an instant cost estimate or request an order from Kwa Shumilensizwa in Durban. Open Monday to Saturday.">
     <meta name="author" content="Phumlani Fikeni">
+    <meta name="theme-color" content="#6b2d1a">
+    <link rel="canonical" href="https://famous-pothos-ebc837.netlify.app/enquiry.html">
 
-    <title>Kwa Shumilensizwa | Enquiry</title>
+    <!-- Open Graph: how the page looks when shared on social media -->
+    <meta property="og:type" content="restaurant.restaurant">
+    <meta property="og:site_name" content="Kwa Shumilensizwa">
+    <meta property="og:title" content="Enquiry & Orders | Kwa Shumilensizwa Durban">
+    <meta property="og:description" content="Ask about a meal, get an instant cost estimate or request an order from Kwa Shumilensizwa in Durban. Open Monday to Saturday.">
+    <meta property="og:url" content="https://famous-pothos-ebc837.netlify.app/enquiry.html">
+    <meta property="og:image" content="https://famous-pothos-ebc837.netlify.app/images/restaurant-takeaway.jpg">
+    <meta property="og:locale" content="en_ZA">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
 
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -67,6 +80,7 @@
 
             <form
                 id="enquiry-form"
+                novalidate
                 action="https://script.google.com/macros/s/AKfycbwhLIKQ6oenVYIFMUSXAV6BGABxuacYJQ8DMS5eEen9z1k8gb7kCe_bkf7_RoCGwml0/exec"
                 method="post"
             >
@@ -81,6 +95,8 @@
                         name="name"
                         placeholder="Enter your full name"
                         autocomplete="name"
+                        minlength="2"
+                        maxlength="60"
                         required
                     >
                 </div>
@@ -107,8 +123,12 @@
                         type="tel"
                         id="phone"
                         name="phone"
-                        placeholder="Enter your phone number"
+                        placeholder="e.g. 078 309 5443"
                         autocomplete="tel"
+                        inputmode="tel"
+                        maxlength="20"
+                        pattern="^(\+27|0)[1-9][0-9\s\(\)\-]{8,14}$"
+                        title="Enter a South African number, e.g. 078 309 5443 or +27 78 309 5443"
                         required
                     >
                 </div>
@@ -133,11 +153,13 @@
 
                     <select id="meal" name="meal">
                         <option value="">-- Select a meal --</option>
-                        <option value="beef">Medium Beef - R130</option>
-                        <option value="chicken">Chicken Meal - R130</option>
-                        <option value="pork">Pork Chop - R100</option>
-                        <option value="tilapia">Grilled Tilapia - R100</option>
-                        <option value="mogodu">Mogodu - R120</option>
+                        <option value="beef" data-price="130">Medium Beef - R130</option>
+                        <option value="chicken" data-price="130">Chicken Meal - R130</option>
+                        <option value="pork" data-price="100">Pork Chop - R100</option>
+                        <option value="tilapia" data-price="100">Grilled Tilapia - R100</option>
+                        <option value="mogodu" data-price="120">Mogodu - R120</option>
+                        <option value="sides" data-price="15">Traditional Side - R15</option>
+                        <option value="drinks" data-price="15">Cold Drink - R15</option>
                         <option value="other">Other / Multiple Items</option>
                     </select>
                 </div>
@@ -151,6 +173,7 @@
                         id="quantity"
                         name="quantity"
                         min="1"
+                        max="50"
                         step="1"
                         placeholder="Enter quantity"
                     >
@@ -175,7 +198,10 @@
                         type="time"
                         id="time"
                         name="time"
+                        min="08:45"
+                        max="19:59"
                     >
+                    <small class="field-hint">We are open Monday to Saturday, 08:45 to 20:00.</small>
                 </div>
 
                 <!-- Message -->
@@ -189,8 +215,16 @@
                         name="message"
                         rows="6"
                         placeholder="Tell us how we can help you..."
+                        minlength="10"
+                        maxlength="1000"
                         required
                     ></textarea>
+                </div>
+
+                <!-- Spam trap: hidden from people, bots tend to fill it in -->
+                <div class="hp-field" aria-hidden="true">
+                    <label for="website">Leave this field empty</label>
+                    <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
                 </div>
 
                 <!-- Submit -->
@@ -203,8 +237,11 @@
                     id="form-status"
                     role="status"
                     aria-live="polite"
-                    style="margin-top: 15px;"
+                    class="form-status"
                 ></p>
+
+                <!-- Instant response about cost and availability (filled in by JavaScript) -->
+                <div id="enquiry-response" class="form-response" tabindex="-1" aria-live="polite" hidden></div>
 
             </form>
 
@@ -245,14 +282,14 @@
         </div>
 
         <div class="social-links">
-            <a href="https://www.instagram.com/reels/audio/3782919772010623/emakhoneni/">Instagram</a>
-            <a href="https://www.facebook.com/p/Shumi-Lensizwa-King-Kataliya-II-100063624854108/">Facebook</a>
+            <a href="https://www.instagram.com/reels/audio/3782919772010623/emakhoneni/" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://www.facebook.com/p/Shumi-Lensizwa-King-Kataliya-II-100063624854108/" target="_blank" rel="noopener noreferrer">Facebook</a>
         </div>
     </footer>
 
 
    
-<script src="js/script.js"></script>
-<script src="js/main.js"></script>
+<script src="js/script.js" defer></script>
+<script src="js/main.js" defer></script>
 </body>
 </html>

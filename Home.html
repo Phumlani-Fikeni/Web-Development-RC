@@ -3,12 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
-    
-    <title>Kwa Shumilensizwa | Home</title>
-<!--Link external css-->
+    <title>Kwa Shumilensizwa | Authentic Kasi Food in Durban</title>
+    <meta name="description" content="Kwa Shumilensizwa serves authentic Kasi meals in Durban: beef, chicken, pork chops, grilled tilapia and mogodu with generous portions. View the menu and order today.">
+    <meta name="author" content="Phumlani Fikeni">
+    <meta name="theme-color" content="#6b2d1a">
+    <link rel="canonical" href="https://famous-pothos-ebc837.netlify.app/">
+
+    <!-- Open Graph: how the page looks when shared on social media -->
+    <meta property="og:type" content="restaurant.restaurant">
+    <meta property="og:site_name" content="Kwa Shumilensizwa">
+    <meta property="og:title" content="Kwa Shumilensizwa | Authentic Kasi Food in Durban">
+    <meta property="og:description" content="Kwa Shumilensizwa serves authentic Kasi meals in Durban: beef, chicken, pork chops, grilled tilapia and mogodu with generous portions. View the menu and order today.">
+    <meta property="og:url" content="https://famous-pothos-ebc837.netlify.app/">
+    <meta property="og:image" content="https://famous-pothos-ebc837.netlify.app/images/restaurant-takeaway.jpg">
+    <meta property="og:locale" content="en_ZA">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
     <link rel="stylesheet" href="css/style.css">
    
+
+    <!-- Structured data (local SEO) -->
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Kwa Shumilensizwa",
+    "url": "https://famous-pothos-ebc837.netlify.app/",
+    "image": "https://famous-pothos-ebc837.netlify.app/images/restaurant-takeaway.jpg",
+    "description": "Authentic Kasi food in Durban: beef, chicken, pork chops, grilled tilapia and mogodu.",
+    "servesCuisine": [
+        "South African",
+        "Kasi"
+    ],
+    "telephone": "+27783095443",
+    "email": "info@kwashumilensizwa.co.za",
+    "hasMenu": "https://famous-pothos-ebc837.netlify.app/menu.html",
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "130 Clark Road",
+        "addressLocality": "Durban",
+        "addressRegion": "KwaZulu-Natal",
+        "postalCode": "4001",
+        "addressCountry": "ZA"
+    },
+    "openingHoursSpecification": [
+        {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday"
+            ],
+            "opens": "08:45",
+            "closes": "20:00"
+        }
+    ]
+}
+    </script>
 </head>
 
 <body>
@@ -59,89 +115,44 @@
             </div>
 
             <div class="hero-image">
-                <img src="images/Takeaway.jpg"
-                     alt="Traditional South African meal served at Kwa Shumilensizwa">
+                <img src="images/restaurant-takeaway.jpg"
+                     alt="Traditional South African meal served at Kwa Shumilensizwa"
+                     width="1200" height="800" loading="eager" fetchpriority="high">
             </div>
         </section>
 
-        <!-- Featured Meals -->
-        
-<!-- Featured Meals Gallery -->
-<section class="featured-meals">
-    <h2>Gallery</h2>
+        <!-- Gallery: hidden until the visitor presses the button -->
+        <section class="featured-meals gallery-section" id="gallery" aria-labelledby="gallery-heading">
+            <h2 id="gallery-heading">Gallery</h2>
 
-    <p>
-        Discover your favourites at Kwa Shumilensizwa,
-        serving authentic Kasi flavours and generous portions.
-    </p>
+            <p>
+                Discover your favourites at Kwa Shumilensizwa,
+                serving authentic Kasi flavours and generous portions.
+            </p>
 
-    <div class="meal-container">
+            <button
+                id="gallery-toggle"
+                class="accordion-toggle"
+                type="button"
+                aria-expanded="false"
+                aria-controls="gallery-panel"
+                data-label-closed="DISPLAY GALLERY"
+                data-label-open="HIDE GALLERY">
+                <span class="accordion-label">DISPLAY GALLERY</span>
+                <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
 
-        <!-- Medium Beef -->
-        <article class="meal-card">
-            <img src="images/beef.jpg"
-                 alt="Medium beef meal served with pap or rice">
-            <h3>Medium Beef</h3>
-            <p>Tender beef served with pap or rice and a delicious side.</p>
-            <p class="price">R130</p>
-            <a href="enquiry.html" class="button">Order Now</a>
-        </article>
+            <div id="gallery-panel" class="accordion-panel" hidden>
+                <!-- Meal cards are created by js/script.js from js/gallery-data.js -->
+                <div id="gallery-grid" class="meal-container"></div>
 
-        <!-- Chicken -->
-        <article class="meal-card">
-            <img src="images/Chicken1.jpg"
-                 alt="Chicken meal served with a traditional side">
-            <h3>Chicken Meal</h3>
-            <p>Flavourful chicken served with pap or rice and a side.</p>
-            <p class="price">R130</p>
-            <a href="enquiry.html" class="button">Order Now</a>
-        </article>
+                <a href="menu.html" class="button">View Full Menu</a>
+            </div>
 
-        <!-- Pork Chop -->
-        <article class="meal-card">
-            <img src="images/Pork chops.jpg"
-                 alt="Pork chop meal served with pap or rice">
-            <h3>Pork Chop</h3>
-            <p>Delicious pork chop served with pap or rice and a side.</p>
-            <p class="price">R100</p>
-            <a href="enquiry.html" class="button">Order Now</a>
-        </article>
-
-        <!-- Grilled Tilapia -->
-        <article class="meal-card">
-            <img src="images/tilapia.jpg"
-                 alt="Grilled tilapia served with a traditional side">
-            <h3>Grilled Tilapia</h3>
-            <p>Grilled fish served with pap or rice and a side.</p>
-            <p class="price">R100</p>
-            <a href="enquiry.html" class="button">Order Now</a>
-        </article>
-
-        <!-- Mogodu -->
-        <article class="meal-card">
-            <img src="images/Tripe.jpg"
-                 alt="Traditional mogodu served with pap">
-            <h3>Mogodu</h3>
-            <p>A traditional favourite served with pap or rice and a side.</p>
-            <p class="price">R120</p>
-            <a href="enquiry.html" class="button">Order Now</a>
-        </article>
-
-        <!-- Traditional Sides -->
-        <article class="meal-card">
-            <img src="images/Sides.png"
-                 alt="Selection of traditional South African food sides">
-            <h3>Traditional Sides</h3>
-            <p>Choose tasty sides to complement your favourite meal.</p>
-            <p class="price">R15</p>
-            <a href="enquiry.html" class="button">Enquire Now</a>
-        </article>
-
-    </div>
-
-    <a href="menu.html" class="button">View Full Menu</a>
-</section>
-
+            <noscript>
+                <p>Turn on JavaScript to browse the gallery, or <a href="menu.html">view our full menu</a>.</p>
+            </noscript>
+        </section>
 
         <!-- About Preview -->
         <section class="about-preview">
@@ -265,11 +276,12 @@
         </div>
 
         <div class="social-links">
-             <a href="https://www.instagram.com/reels/audio/3782919772010623/emakhoneni/">Instagram</a>
-            <a href="https://www.facebook.com/p/Shumi-Lensizwa-King-Kataliya-II-100063624854108/">Facebook</a>
+             <a href="https://www.instagram.com/reels/audio/3782919772010623/emakhoneni/" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://www.facebook.com/p/Shumi-Lensizwa-King-Kataliya-II-100063624854108/" target="_blank" rel="noopener noreferrer">Facebook</a>
         </div>
     </footer>
-<script src="js/script.js"></script>
-<script src="js/main.js"></script>
+<script src="js/gallery-data.js" defer></script>
+<script src="js/script.js" defer></script>
+<script src="js/main.js" defer></script>
 </body>
 </html>

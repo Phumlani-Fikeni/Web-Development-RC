@@ -3,11 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta name="description" content="View the Kwa Shumilensizwa menu featuring beef, chicken, pork, fish, traditional meals, sides and drinks.">
+    <title>Menu | Kwa Shumilensizwa Kasi Meals in Durban</title>
+    <meta name="description" content="View the Kwa Shumilensizwa menu: beef, chicken, pork, fish, traditional mogodu, sides and cold drinks, with prices. Search and sort to find your meal.">
     <meta name="author" content="Phumlani Fikeni">
+    <meta name="theme-color" content="#6b2d1a">
+    <link rel="canonical" href="https://famous-pothos-ebc837.netlify.app/menu.html">
 
-    <title>Kwa Shumilensizwa | Menu</title>
+    <!-- Open Graph: how the page looks when shared on social media -->
+    <meta property="og:type" content="restaurant.restaurant">
+    <meta property="og:site_name" content="Kwa Shumilensizwa">
+    <meta property="og:title" content="Menu | Kwa Shumilensizwa Kasi Meals in Durban">
+    <meta property="og:description" content="View the Kwa Shumilensizwa menu: beef, chicken, pork, fish, traditional mogodu, sides and cold drinks, with prices. Search and sort to find your meal.">
+    <meta property="og:url" content="https://famous-pothos-ebc837.netlify.app/menu.html">
+    <meta property="og:image" content="https://famous-pothos-ebc837.netlify.app/images/restaurant-takeaway.jpg">
+    <meta property="og:locale" content="en_ZA">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
 
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -76,42 +89,19 @@
     </select>
 
     <p>Search results update as you type.</p>
+    <p id="menu-results" class="menu-results" role="status" aria-live="polite"></p>
 </section>
         <!-- Menu Categories -->
         <section class="menu-section">
 
-          <div class="menu-tools">
-                <div class="tool">
-                    <label for="menuSearch">Search the menu</label>
-                    <input type="search" id="menuSearch" placeholder="e.g. chicken, fish, mogodu">
-                </div>
-                <div class="tool">
-                    <label for="menuSort">Sort by</label>
-                    <select id="menuSort">
-                        <option value="default">Menu order</option>
-                        <option value="price-asc">Price: low -> high</option>
-                        <option value="price-desc">Price: high -> low</option>
-                        <option value="name">Name: A to Z</option>
-                    </select>
-                </div>
-            </div>
-<button 
-    id="Display-menu"
-    class="menu-accordion"
-    type="button"
-    aria-expanded="false"
-    aria-controls="menu-accordion-content">
-    <span>DISPLAY MENU</span>
-    <span class="accordion-icon" aria-hidden="true">+</span>
-</button>
-            <!-- Beef -->
+          <!-- Beef -->
             <div class="menu-category" id="beef">
 
                 <h2>Beef</h2>
 
                 <div class="menu-item">
 
-                    <img src="images/beef.jpg" alt="Medium beef meal">
+                    <img src="images/beef-meal.jpg" alt="Medium beef meal">
 
                     <div class="menu-item-info">
 
@@ -138,7 +128,7 @@
 
                 <div class="menu-item">
 
-                    <img src="images/Chicken1.jpg" alt="Chicken meal">
+                    <img src="images/chicken-meal.jpg" alt="Chicken meal">
 
                     <div class="menu-item-info">
 
@@ -165,7 +155,7 @@
 
                 <div class="menu-item">
 
-                    <img src="images/Pork chops.jpg" alt="Pork chop meal">
+                    <img src="images/pork-chop-meal.jpg" alt="Pork chop meal">
 
                     <div class="menu-item-info">
 
@@ -192,7 +182,7 @@
 
                 <div class="menu-item">
 
-                    <img src="images/tilapia.jpg" alt="Grilled tilapia">
+                    <img src="images/grilled-tilapia-meal.jpg" alt="Grilled tilapia">
 
                     <div class="menu-item-info">
 
@@ -219,7 +209,7 @@
 
                 <div class="menu-item">
 
-                    <img src="images/Tripe.jpg" alt="Mogodu traditional meal">
+                    <img src="images/mogodu-tripe-meal.jpg" alt="Mogodu traditional meal">
 
                     <div class="menu-item-info">
 
@@ -246,7 +236,7 @@
 
                 <div class="menu-item">
 
-                    <img src="images/Sides.png" alt="Traditional food sides">
+                    <img src="images/traditional-sides.jpg" alt="Traditional food sides">
 
                     <div class="menu-item-info">
 
@@ -273,7 +263,7 @@
 
                 <div class="menu-item">
 
-                    <img src="images/Drinks.jpeg" alt="Cold drinks">
+                    <img src="images/cold-drinks.jpg" alt="Cold drinks">
 
                     <div class="menu-item-info">
 
@@ -324,12 +314,12 @@
         </div>
 
         <div class="social-links">
-            <a href="https://www.instagram.com/reels/audio/3782919772010623/emakhoneni/">Instagram</a>
-            <a href="https://www.facebook.com/p/Shumi-Lensizwa-King-Kataliya-II-100063624854108/">Facebook</a>
+            <a href="https://www.instagram.com/reels/audio/3782919772010623/emakhoneni/" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://www.facebook.com/p/Shumi-Lensizwa-King-Kataliya-II-100063624854108/" target="_blank" rel="noopener noreferrer">Facebook</a>
         </div>
 
     </footer>
-<script src="js/script.js"></script>
-<script src="js/main.js"></script>
+<script src="js/script.js" defer></script>
+<script src="js/main.js" defer></script>
 </body>
 </html>

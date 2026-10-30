@@ -36,41 +36,6 @@ body {
     line-height:1;
 }
 
-/* Google Maps JavaScript API */
-.map-section {
-    padding: 40px 5%;
-    text-align: center;
-}
-
-#map {
-    width: 100%;
-    height: 450px;
-    margin: 25px auto;
-    border-radius: 12px;
-    overflow: hidden;
-    background: #eeeeee;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-.map-actions {
-    margin-top: 20px;
-}
-
-#map-message {
-    color: #b00020;
-    margin-top: 12px;
-}
-
-@media (max-width: 600px) {
-    #map {
-        height: 350px;
-    }
-
-    .map-section {
-        padding: 30px 15px;
-    }
-}
-
 article,aside,details,figcaption,figure,
 footer,header,hgroup,menu,nav,section {
     display:block;
@@ -982,7 +947,7 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background-image: url('../images/Hero.jpg'); /* fix path - your images are in /images/ */
+  background-image: url('../images/background-hero.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1137,5 +1102,220 @@ select[aria-invalid="true"] {
 
     .meal-card img {
         height: 230px;
+    }
+}
+
+/* ============================= */
+/* PART 3: ACCORDION / GALLERY    */
+/* ============================= */
+
+/* Anything marked hidden must stay hidden, whatever display value it has. */
+[hidden] {
+    display: none !important;
+}
+
+.accordion-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 100%;
+    max-width: 420px;
+    margin: 1.25rem auto 0;
+    padding: 0.85rem 1.25rem;
+    background-color: #581845;
+    color: #ffffff;
+    border: 0;
+    border-radius: 6px;
+    font: inherit;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.accordion-toggle:hover {
+    background-color: #6b2d1a;
+}
+
+.accordion-toggle:focus-visible {
+    outline: 3px solid #FFC300;
+    outline-offset: 3px;
+}
+
+.accordion-icon {
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.accordion-panel {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.accordion-panel:not([hidden]) {
+    animation: panel-fade-in 0.45s ease;
+}
+
+@keyframes panel-fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Gallery images are clickable (lightbox) */
+.lightbox-image {
+    cursor: zoom-in;
+    transition: transform 0.25s ease;
+}
+
+.lightbox-image:hover {
+    transform: scale(1.03);
+}
+
+.lightbox-image:focus-visible {
+    outline: 3px solid #FFC300;
+    outline-offset: 3px;
+}
+
+.lightbox-caption {
+    text-align: center;
+    margin-bottom: 0.75rem;
+    color: #333333;
+}
+
+.image-lightbox {
+    text-align: center;
+}
+
+/* ============================= */
+/* PART 3: FORMS                  */
+/* ============================= */
+
+.error-message {
+    display: block;
+    margin-top: 5px;
+    color: #b3261e;
+}
+
+.field-hint {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.85rem;
+    color: #444444;
+}
+
+.form-status {
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+.status-success {
+    color: #1b6e2d;
+}
+
+.status-error {
+    color: #b3261e;
+}
+
+/* Spam trap field: invisible to people, still in the page for bots */
+.hp-field {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.form-response,
+.email-preview {
+    margin-top: 1.5rem;
+    padding: 1.25rem;
+    background-color: #ffffff;
+    border-left: 6px solid #d98b36;
+    border-radius: 8px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+    text-align: left;
+    animation: panel-fade-in 0.45s ease;
+}
+
+.form-response:focus,
+.email-preview:focus {
+    outline: 3px solid #FFC300;
+}
+
+.form-response ul {
+    margin: 0.75rem 0 0 1.25rem;
+    list-style: disc;
+}
+
+.form-response li {
+    margin-bottom: 0.5rem;
+}
+
+.email-preview dl {
+    margin: 0.75rem 0;
+}
+
+.email-preview dt {
+    font-weight: 700;
+}
+
+.email-preview dd {
+    margin: 0 0 0.5rem;
+    overflow-wrap: anywhere;
+}
+
+.email-preview pre {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: #f6f1ea;
+    border-radius: 6px;
+    font: inherit;
+}
+
+.menu-results {
+    margin-top: 0.75rem;
+    font-weight: 600;
+}
+
+/* ============================= */
+/* PART 3: INTERACTIVE MAP        */
+/* ============================= */
+
+.map-container {
+    position: relative;
+    z-index: 0;
+    isolation: isolate;
+    width: 100%;
+    height: 400px;
+    margin-top: 1rem;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+@media (max-width: 600px) {
+    .map-container {
+        height: 300px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .accordion-panel:not([hidden]),
+    .form-response,
+    .email-preview {
+        animation: none;
+    }
+
+    .lightbox-image,
+    .accordion-toggle {
+        transition: none;
     }
 }
