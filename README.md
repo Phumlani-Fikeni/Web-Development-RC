@@ -45,7 +45,7 @@ allow users to quickly access important information and website functions.
 
 # LAYOUT:
 - Page	File	Purpose
-- Home	Home.html	Introduces the restaurant and highlights meals
+- Home Home.html	Introduces the restaurant and highlights meals
 - About Us	about.html	Explains the restaurant's background and values
 - Menu	menu.html	Displays meals, categories and prices
 - Enquiry	enquiry.html	Allows customers to make enquiries and order requests
@@ -105,28 +105,22 @@ Web-Development-RC/ <br />
 ├── menu.html <br />
 ├── enquiry.html <br />
 ├── contact.html <br />
+├── robots.txt <br />
+├── sitemap.xml <br />
+├── _headers<br />
 │ <br />
 ├── css/ <br />
 │   └── style.css <br />
 │ <br />
 ├── js/ <br />
-│   └── script.js <br />
+│   ├── script.js <br />
+│   ├── gallery-data.js  <br />
+│   └── main.js <br />
 │ <br />
 ├── images/ <br />
-│   └──Beef.jpg <br />
-│   └──chicken.jpg <br />
-│   └──talipa.jpg <br />
-│   └──Hero.jpg <br />
-│   └──Chicken1.jpg <br />
-│   └──Foof.jpg <br />
-│   └──Hero.jpg <br />
-│   └──Grilled fish.jpg <br />
-│   └──Pork chops.jpg <br />
-│   └──Sides.jpg <br />
-│   └──Takeaway.jpg <br />
-│   └──Tripe.jpg <br />
-│   └──Tshisanyama.jpg <br />
-│   └──Chicken1.jpg <br />
+│   └── beef-meal.jpg, chicken-meal.jpg, pork-chop-meal.jpg, grilled-tilapia-meal.jpg, <br />
+│       mogodu-tripe-meal.jpg, traditional-sides.jpg, cold-drinks.jpg, <br />
+│       restaurant-takeaway.jpg, background-hero.jpg, and screenshots <br />
 │  <br />
 └── README.md
 
@@ -181,6 +175,28 @@ Desktop view/
 ![Website Screenshot](images/Screenshot%202026-09-18%20173326.png)
 Smaller sized
 ![Website Screenshot](images/Screenshot%202026-09-18%20173859.png)
+
+## Part 3 – Enhancing Functionality and SEO
+Live website: https://famous-pothos-ebc837.netlify.app/ (deployed on Netlify)
+
+Part 3 added JavaScript interaction, search engine optimisation and working forms to the styled website from Part 2.
+
+**Interactive elements.** The Home page Gallery is an accordion. It starts hidden and a DISPLAY GALLERY button reveals it (and changes to HIDE GALLERY). The gallery cards are not written in the HTML: they are built with JavaScript from the data in js/gallery-data.js the first time the gallery is opened, which is a form of dynamic content loading and keeps the first page load light. Every food image on the Home, Menu and About pages opens in a lightbox when clicked or when Enter is pressed. The Contact page has an interactive Leaflet map with OpenStreetMap tiles and a marker popup. Panels, cards and buttons use CSS transitions and animations, which are switched off for visitors who prefer reduced motion.
+
+**Search and sort.** The Menu page lets visitors search the menu as they type and sort it alphabetically or by price, with a message when nothing matches.
+
+**Forms.** Both forms use HTML5 attributes (required, type, minlength, maxlength, pattern, min and max) together with JavaScript validation that shows a message under each invalid field. Phone numbers must be valid South African numbers, dates cannot be in the past or on a Sunday, and times must fall within opening hours (08:45 to 20:00). The enquiry form sends its data with AJAX (fetch) to a Google Apps Script and then shows an instant response with an estimated cost (price multiplied by quantity) and availability. The contact form compiles the validated details into an email addressed to info@kwashumilensizwa.co.za, shows a preview, and the visitor sends it with the Send Email button. Both forms have a hidden spam-trap field.
+
+**SEO.** Every page has a unique title tag and meta description, a canonical link and Open Graph tags. Headings are structured with one H1 per page. Images have descriptive file names (for example beef-meal.jpg) and alt text. The Home page has Restaurant structured data (JSON-LD) with the address and opening hours for local search. robots.txt and sitemap.xml are included and the sitemap is listed in robots.txt. Target keywords used in the content include: Kasi food Durban, traditional South African food Durban, mogodu, takeaway Durban, and Clark Road restaurant.
+
+**Page speed.** Images were resized and compressed (about 5.4 MB reduced to about 1.4 MB for the images used by the site), below-the-fold images load lazily, the main hero image loads immediately, and scripts use defer.
+
+**Security.** The _headers file sets a Content-Security-Policy, X-Frame-Options, X-Content-Type-Options, Referrer-Policy and Permissions-Policy on Netlify. External links use rel="noopener noreferrer", user input is only ever written to the page as text (never as HTML), the Leaflet files are pinned to one version with integrity hashes, and the site is served over HTTPS.
+
+**Off-page SEO (planned).** Link the website from the restaurant's Facebook and Instagram pages and its Uber Eats listing, and claim a Google Business Profile for 130 Clark Road.
+
+### Responsive testing (Part 3)
+Screenshots of the website on desktop, tablet and mobile devices are to be added here.
 
 # Changelog
 **Part 1 30 July 2026 – 14 August 2026**
@@ -239,6 +255,28 @@ Planned Updates<br>
 - Updated README.md to document the Part 2 development work.
 - Updated references used during the CSS and website development process.
 **Part 3 - 18 September 2026 - 5 November 2026**<br>
+<br>Edits based on Part 2 feedback<br>
+- No major changes where needed: Feedback was to relate git commits to  changelog
+
+<br>29 October 2026<br>
+- Moved the DISPLAY button out of the Menu page and into the Home page Gallery. The gallery now starts hidden (hidden attribute in the HTML) and the button reveals and hides it. The old version showed the menu first because the script set aria-expanded to true, and its search code overrode the hidden state.
+- Rewrote the accordion function so it works for any button with the accordion-toggle class and keeps the button's label and +/- icon when toggled.
+- Built the gallery cards dynamically with JavaScript from js/gallery-data.js, created the first time the gallery is opened.
+- Rebuilt the lightbox with event delegation so it also works for images added by JavaScript, added keyboard support and an image caption.
+- Menu page: removed the duplicate search and sort controls (two elements shared the same ids), and added a live message for when no meals match the search.
+- Enquiry form: added JavaScript validation for name, email, phone, enquiry type, quantity, date and time (no past dates, no Sundays, opening hours only) and message length. Added a response that shows the estimated cost and availability. Added sides and cold drinks to the meal list.
+- Enquiry form: fixed the status message, which was written to a different element than the one in the HTML, and kept the AJAX submission to the Google Apps Script.
+- Contact form: added the missing Type of Message field, validation, and a compiled email preview with a Send Email (mailto) button addressed to the recipient set in script.js. Removed the FormSubmit service.
+- Fixed invalid HTML on the Contact page (a mistyped closing row tag and an extra closing div).
+- Added hidden spam-trap fields to both forms.
+- SEO: added a unique title tag and meta description to every page (the Home page had no meta description), canonical links, Open Graph tags and Restaurant structured data.
+- SEO: renamed images to descriptive lowercase names with hyphens. The old names (for example beef.jpg in the HTML against Beef.jpg on disk) would fail on Netlify, whose servers are case-sensitive.
+- SEO: fixed sitemap.xml (missing namespace, spaces inside the addresses) and robots.txt (the Sitemap line now points to sitemap.xml).
+- Page speed: resized and compressed images, loaded the hero image eagerly and other images lazily, and added defer to scripts.
+- Security: added the _headers file, rel="noopener noreferrer" on external links, and fixed the typo in the About page footer.
+- Removed unused helper code from main.js.
+- Tested the gallery toggle, lightbox, menu search, both forms and the map in an automated test.
+<br>30 October 2026<br>
 
 
 
@@ -286,5 +324,16 @@ Wikimedia Commons (n.d.) Category: Takeaway food shops in South Africa [Photogra
 Available at:
 https://commons.wikimedia.org/wiki/Category:Takeaway_food_shops_in_South_Africa
 [Accessed: 18 September 2026]. <br>
+
+Agafonkin, V. (2023) Leaflet: an open-source JavaScript library for interactive maps, version 1.9.4. Available at: https://leafletjs.com/ [Accessed: 29 October 2026]. <br>
+
+Google (n.d.) SEO Starter Guide. Google Search Central. Available at: https://developers.google.com/search/docs/fundamentals/seo-starter-guide [Accessed: 29 October 2026]. <br>
+
+OpenStreetMap contributors (n.d.) OpenStreetMap. Available at: https://www.openstreetmap.org/copyright [Accessed: 29 October 2026]. <br>
+
+Sitemaps.org (n.d.) Sitemaps XML format. Available at: https://www.sitemaps.org/protocol.html [Accessed: 29 October 2026]. <br>
+
+Schema.org (n.d.) Restaurant. Available at: https://schema.org/Restaurant [Accessed: 29 October 2026]. <br>
+
 Google form ID
 https://script.google.com/macros/s/AKfycbwhLIKQ6oenVYIFMUSXAV6BGABxuacYJQ8DMS5eEen9z1k8gb7kCe_bkf7_RoCGwml0/exec
