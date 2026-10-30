@@ -246,6 +246,9 @@ Planned Updates<br>
 Awada, R., 2024. Easy Homemade Beef Stew. [Online]  
 Available at: https://healthyfitnessmeals.com/homemade-beef-stew/ 
 [Accessed 13 August 2026]. <br>
+Ayutthaya, T (2020) Coca-Cola Classic in a glass bottle and can on dark toned cement Background. Coca Cola, Coke is th. Coca-Cola Classic in a glass bottle and can on dark toned cement Background. Coca Cola, Coke is the most popular carbonated soft drink beverages sold around the world [Photographs]. Dreamstime. Available at:
+https://www.vecteezy.com/photo/15656435-ayutthaya-thailand-25june2020-coca-cola-classic-in-a-glass-bottle-and-can-on-dark-toned-cement-background-coca-cola-coke-is-the-most-popular-carbonated-soft-drink-beverages-sold-around-the-world
+[Accessed 13 August 2026]. <br>
 Colorary, n.d. 70 Restaurant Color Palettes & Schemes. [Online]  
 Available at: https://colorany.com/color-palettes/restaurant-color-palettes/ 
 [Accessed 13 August 2026]. <br>
@@ -258,29 +261,30 @@ Grocito, 2026. Minimal vs Bold Branding: Which Works Better for Your Industry? (
 Friendly, Practical Guide). [Online]  
 Available at: https://blog.grocito.com/minimal-vs-bold-branding-which-works-better-for-your-industry-a-friendly-practical-guide/ 
 [Accessed 13 August 2026]. <br>
+
+Foodie (2024) Mogodu (Tripe) Recipe: A South African Culinary Tradition [Photograph]. foodiemag. Available at:
+https://foodiemag.co.za/mogodu-tripe-recipe-a-south-african-culinary-tradition/
+[Accessed: 18 September 2026]. <br>
+
 In Your Pocket (n.d.) A South African Chisa Nyama [Photograph]. Available at:
 https://www.inyourpocket.com/southafrica/johannesburg/articles/a-south-african-chisa-nyama
-(Accessed: 18 September 2026).
+[Accessed: 18 September 2026]. <br>
 
-IOL (2026) Homemade South African vegetable atchar [Photograph]. Available at:
-https://iol.co.za/lifestyle/food-drink/2026-07-20-homemade-south-african-vegetable-atchar-recipe-that-is-easy-to-make/
-(Accessed: 18 September 2026).
+Melati, B (2026) Chakalaka Charm: South African ligabandot Spicy Vegetable Relish [Photograph]. Available at:
+https://www.fatcitystacks.com/ligabandot-chakalaka-charm/
+[Accessed: 18 September 2026]. <br>
 
 Penwills (2025) Grilled tilapia [Photograph]. Wikimedia Commons. Available at:
 https://commons.wikimedia.org/wiki/File:Grilled_tilapia.jpg
-(Accessed: 18 September 2026).
+[Accessed: 18 September 2026]. <br>
 
 Pradhan, K. (2015) Pork Chops [Photograph]. Wikimedia Commons. Available at:
 https://commons.wikimedia.org/wiki/File:Pork_Chops.jpg
 (Accessed: 18 September 2026).
 
-Rankaga, B.N. (2026) Beef tripe (Mogodu wa kgomo) [Photograph]. Wikimedia Commons. Available at:
-https://commons.wikimedia.org/wiki/File:Beef_tripe(Mogodu_wa_kgomo).jpg
-(Accessed: 18 September 2026).
-
 Wikimedia Commons (n.d.) Category: Takeaway food shops in South Africa [Photographs].
 Available at:
 https://commons.wikimedia.org/wiki/Category:Takeaway_food_shops_in_South_Africa
-(Accessed: 18 September 2026).
+[Accessed: 18 September 2026]. <br>
 Google form ID
 https://script.google.com/macros/s/AKfycbwhLIKQ6oenVYIFMUSXAV6BGABxuacYJQ8DMS5eEen9z1k8gb7kCe_bkf7_RoCGwml0/exec
